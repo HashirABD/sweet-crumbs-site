@@ -14,162 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- =========================================================================
-       MASTER CLIENT CONFIGURATION BLOCK
-       Change this block to update business details in one place!
-       ========================================================================= -->
-  <script>
-    const SITE_CONFIG = {
-      // 1. Business Info
-      businessName: "Sweet Crumbs Lahore",
-      tagline: "Fresh Cakes & Brownies Made for You",
-      subTagline: "We bake fresh cakes, brownies, and cookies with pure butter. Made to order and delivered to your door in Lahore.",
-      orderNotice: "Fresh home bakery in Lahore • Baked to order daily",
-
-      // 2. Contact & Socials
-      phoneDisplay: "0323 3732647",
-      whatsappNumber: "923233732647", // Digits only, no +, no spaces
-      instagramHandle: "@sweetcrumbslahore",
-      instagramUrl: "https://www.instagram.com/sweetcrumbslahore",
-      location: "Gulberg III, Lahore",
-      googleMapsUrl: "https://maps.google.com/?q=Gulberg+III+Lahore",
-      deliveryInfo: "We deliver across Lahore: Gulberg, DHA, Cantt, Model Town, Johar Town, Bahria Town, and nearby areas.",
-      openingHours: "Open every day: 10:00 AM to 9:00 PM (Please order 1 day before)",
-
-      // 3. Brand Theme & Colors
-      colors: {
-        primary: "#7A381E",         // Warm cocoa brown
-        primaryDark: "#582613",     // Deep chocolate brown
-        primaryLight: "#F5ECE1",    // Warm cream accent
-        accent: "#C86A2E",          // Warm cinnamon amber
-        accentHover: "#A8531D",
-        whatsapp: "#25D366",        // WhatsApp green
-        whatsappDark: "#1EBE5D",
-        bgPage: "#FDF9F4",          // Soft bakery cream
-        bgCard: "#FFFFFF",          // White card
-        textMain: "#2C1E18",        // Deep readable brown
-        textMuted: "#72645B",       // Warm grey-brown
-        borderLight: "#EFE5D8"      // Soft border
-      },
-
-      // 4. Hero Section Badges
-      heroBadges: [
-        { icon: "✨", text: "100% Pure Butter" },
-        { icon: "🍫", text: "Real Chocolate" },
-        { icon: "🛵", text: "Fast Lahore Delivery" }
-      ],
-
-      // 5. How to Order Steps (Simple English)
-      howToOrder: [
-        {
-          step: "1",
-          title: "Choose Your Items",
-          desc: "Browse our menu, choose your quantity, and tap 'Add to Order'."
-        },
-        {
-          step: "2",
-          title: "Open WhatsApp",
-          desc: "Tap 'Send Order on WhatsApp'. Your full order list is written automatically."
-        },
-        {
-          step: "3",
-          title: "We Confirm & Bake",
-          desc: "We confirm your delivery time and bake your treats fresh for you!"
-        }
-      ],
-
-      // 6. About Section
-      about: {
-        badge: "About Us",
-        heading: "Baked at Home with Real Butter",
-        paragraphs: [
-          "Sweet Crumbs is a home bakery in Lahore. We love baking fresh treats for birthdays, tea time, and celebrations.",
-          "We only use real butter and good chocolate. We never use premixes or artificial flavors. Every order is baked fresh on the day of delivery."
-        ],
-        stats: [
-          { value: "100%", label: "Fresh & Halal" },
-          { value: "Made to Order", label: "Never Stale" },
-          { value: "All Lahore", label: "Home Delivery" }
-        ]
-      },
-
-      // 7. Menu Items (8 items with local SVG images & simple descriptions)
-      menu: [
-        {
-          id: 1,
-          name: "Belgian Fudgy Brownies (Box of 6)",
-          category: "Brownies",
-          badge: "Bestseller",
-          pricePKR: 1950,
-          description: "Soft, rich chocolate brownies with a crispy top. Baked with dark chocolate.",
-          image: "./images/brownies.svg"
-        },
-        {
-          id: 2,
-          name: "Red Velvet Cake (2 lbs)",
-          category: "Cakes",
-          badge: "Popular",
-          pricePKR: 2850,
-          description: "Soft red cake with layers of sweet cream cheese frosting.",
-          image: "./images/red-velvet.svg"
-        },
-        {
-          id: 3,
-          name: "Lotus Biscoff Tres Leches",
-          category: "Dessert Tubs",
-          badge: "Must Try",
-          pricePKR: 1650,
-          description: "Sweet milk cake topped with fresh cream and Lotus biscuit spread.",
-          image: "./images/tres-leches.svg"
-        },
-        {
-          id: 4,
-          name: "Chocolate Chunk Cookies (Pack of 4)",
-          category: "Cookies",
-          badge: "Fresh Daily",
-          pricePKR: 1350,
-          description: "Warm, chewy cookies with real dark chocolate chunks and sea salt.",
-          image: "./images/cookies.svg"
-        },
-        {
-          id: 5,
-          name: "Nutella Hazelnut Cake (2.5 lbs)",
-          category: "Cakes",
-          badge: "Special",
-          pricePKR: 3750,
-          description: "Rich chocolate cake with Nutella cream and roasted hazelnuts.",
-          image: "./images/hazelnut-cake.svg"
-        },
-        {
-          id: 6,
-          name: "Lemon Tea Cake",
-          category: "Tea Cakes",
-          badge: "Light & Sweet",
-          pricePKR: 1500,
-          description: "Soft, buttery lemon cake with sweet lemon glaze on top.",
-          image: "./images/lemon-loaf.svg"
-        },
-        {
-          id: 7,
-          name: "Pistachio Cupcakes (Box of 4)",
-          category: "Cupcakes",
-          badge: "Customer Favorite",
-          pricePKR: 1750,
-          description: "Soft pistachio cupcakes with sweet rose cream and crushed nuts.",
-          image: "./images/cupcakes.svg"
-        },
-        {
-          id: 8,
-          name: "Salted Caramel Tartlets (Pack of 4)",
-          category: "Tarts",
-          badge: "Crispy & Gooey",
-          pricePKR: 1850,
-          description: "Crispy pastry cups filled with sweet caramel and crunchy pecans.",
-          image: "./images/tartlets.svg"
-        }
-      ]
-    };
-  </script>
+  <!-- Client Configuration Block (External config.js for quick client reuse) -->
+  <script src="config.js" defer></script>
 
   <!-- Theme Stylesheet (Variables with solid fallbacks) -->
   <style id="dynamic-theme-vars">
@@ -648,9 +494,30 @@
     .menu-card-img-wrap {
       position: relative;
       width: 100%;
-      height: 220px;
+      height: 190px;
       overflow: hidden;
       background-color: #F7EFE4;
+    }
+
+    .emoji-card-header {
+      background: linear-gradient(135deg, #FBF3E8 0%, #F5E5D3 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 190px;
+      position: relative;
+      user-select: none;
+    }
+
+    .menu-emoji {
+      font-size: 4.5rem;
+      line-height: 1;
+      filter: drop-shadow(0 4px 8px rgba(92, 43, 24, 0.12));
+      transition: transform 0.25s ease;
+    }
+
+    .menu-card:hover .menu-emoji {
+      transform: scale(1.1);
     }
 
     .menu-card-img-wrap img {
@@ -1483,7 +1350,7 @@
             Fresh Cakes & Brownies Made for You
           </h1>
           <p class="hero-description" id="hero-desc-text">
-            We bake fresh cakes, brownies, and cookies with pure butter. Made to order and delivered to your door in Lahore.
+            We bake fresh cakes, brownies, and cookies with pure butter. Order anytime for delivery in 30-40 minutes across Lahore.
           </p>
           <div class="hero-actions">
             <a href="#menu" class="btn btn-primary">
@@ -1498,7 +1365,7 @@
           <div class="hero-badges-list" id="hero-badges-container">
             <div class="hero-badge-item"><span>✨</span><span>100% Pure Butter</span></div>
             <div class="hero-badge-item"><span>🍫</span><span>Real Chocolate</span></div>
-            <div class="hero-badge-item"><span>🛵</span><span>Fast Lahore Delivery</span></div>
+            <div class="hero-badge-item"><span>🛵</span><span>Delivery in 30-40 mins</span></div>
           </div>
         </div>
 
@@ -1518,7 +1385,7 @@
     </div>
   </section>
 
-  <!-- How to Order Section (TASK 2) -->
+  <!-- How to Order Section (TASK 2 & TASK 4: 30-40 mins) -->
   <section class="how-section" id="how-to-order">
     <div class="container">
       <div class="section-header" style="margin-bottom: 2rem;">
@@ -1537,19 +1404,19 @@
         </div>
         <div class="how-card">
           <div class="how-number">2</div>
-          <h3>Open WhatsApp</h3>
-          <p>Tap "Send Order on WhatsApp". Your whole order is written out for you automatically.</p>
+          <h3>Tap "Send Order on WhatsApp"</h3>
+          <p>Your order list is ready. Tap the green button to open WhatsApp.</p>
         </div>
         <div class="how-card">
           <div class="how-number">3</div>
-          <h3>We Confirm & Bake</h3>
-          <p>We confirm your delivery time and bake your treats fresh for you!</p>
+          <h3>We deliver in 30-40 minutes</h3>
+          <p>We confirm your order and deliver fresh treats to your door in 30-40 minutes!</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Menu Section (TASK 1: Quantity selector and Add to Order) -->
+  <!-- Menu Section (10 Items Rendered Directly in HTML with Emojis & Quantity Selectors) -->
   <section class="menu-section" id="menu">
     <div class="container">
       <div class="section-header">
@@ -1561,7 +1428,295 @@
       </div>
 
       <div class="menu-grid" id="menu-grid">
-        <!-- Rendered dynamically from SITE_CONFIG.menu -->
+        <!-- Item 1 -->
+        <article class="menu-card" data-item-id="1">
+          <div class="menu-card-img-wrap emoji-card-header">
+            <span class="menu-emoji">🎂</span>
+            <span class="menu-card-badge">Bestseller</span>
+            <span class="menu-card-category">Cakes</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">Chocolate Fudge Cake</h3>
+            <p class="menu-card-desc">Rich, moist chocolate sponge layered with smooth chocolate fudge ganache.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price-wrap">
+                <span class="menu-card-price-label">Price</span>
+                <span class="menu-card-price">PKR 2,450</span>
+              </div>
+              <div class="menu-card-actions">
+                <div class="qty-selector" aria-label="Select quantity">
+                  <button type="button" class="qty-btn" data-action="minus" data-id="1" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display" id="card-qty-1">1</span>
+                  <button type="button" class="qty-btn" data-action="plus" data-id="1" aria-label="Increase quantity">+</button>
+                </div>
+                <button type="button" class="btn-add-order" data-action="add" data-id="1" id="add-btn-1">
+                  <span>Add to Order</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="menu-card" data-item-id="2">
+          <div class="menu-card-img-wrap emoji-card-header">
+            <span class="menu-emoji">🎂</span>
+            <span class="menu-card-badge">Celebration</span>
+            <span class="menu-card-category">Cakes</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">Vanilla Birthday Cake</h3>
+            <p class="menu-card-desc">Classic light vanilla sponge cake with sweet cream frosting and colorful sprinkles.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price-wrap">
+                <span class="menu-card-price-label">Price</span>
+                <span class="menu-card-price">PKR 2,200</span>
+              </div>
+              <div class="menu-card-actions">
+                <div class="qty-selector" aria-label="Select quantity">
+                  <button type="button" class="qty-btn" data-action="minus" data-id="2" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display" id="card-qty-2">1</span>
+                  <button type="button" class="qty-btn" data-action="plus" data-id="2" aria-label="Increase quantity">+</button>
+                </div>
+                <button type="button" class="btn-add-order" data-action="add" data-id="2" id="add-btn-2">
+                  <span>Add to Order</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3 -->
+        <article class="menu-card" data-item-id="3">
+          <div class="menu-card-img-wrap emoji-card-header">
+            <span class="menu-emoji">🍰</span>
+            <span class="menu-card-badge">Popular</span>
+            <span class="menu-card-category">Cakes</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">Red Velvet Cake</h3>
+            <p class="menu-card-desc">Moist red velvet sponge with layers of real whipped cream cheese frosting.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price-wrap">
+                <span class="menu-card-price-label">Price</span>
+                <span class="menu-card-price">PKR 2,650</span>
+              </div>
+              <div class="menu-card-actions">
+                <div class="qty-selector" aria-label="Select quantity">
+                  <button type="button" class="qty-btn" data-action="minus" data-id="3" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display" id="card-qty-3">1</span>
+                  <button type="button" class="qty-btn" data-action="plus" data-id="3" aria-label="Increase quantity">+</button>
+                </div>
+                <button type="button" class="btn-add-order" data-action="add" data-id="3" id="add-btn-3">
+                  <span>Add to Order</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4 -->
+        <article class="menu-card" data-item-id="4">
+          <div class="menu-card-img-wrap emoji-card-header">
+            <span class="menu-emoji">🍫</span>
+            <span class="menu-card-badge">Fresh Daily</span>
+            <span class="menu-card-category">Brownies</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">Chocolate Brownies (box of 6)</h3>
+            <p class="menu-card-desc">Fudgy dark Belgian chocolate brownies with a glossy crackly top.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price-wrap">
+                <span class="menu-card-price-label">Price</span>
+                <span class="menu-card-price">PKR 1,950</span>
+              </div>
+              <div class="menu-card-actions">
+                <div class="qty-selector" aria-label="Select quantity">
+                  <button type="button" class="qty-btn" data-action="minus" data-id="4" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display" id="card-qty-4">1</span>
+                  <button type="button" class="qty-btn" data-action="plus" data-id="4" aria-label="Increase quantity">+</button>
+                </div>
+                <button type="button" class="btn-add-order" data-action="add" data-id="4" id="add-btn-4">
+                  <span>Add to Order</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 5 -->
+        <article class="menu-card" data-item-id="5">
+          <div class="menu-card-img-wrap emoji-card-header">
+            <span class="menu-emoji">🧁</span>
+            <span class="menu-card-badge">Favorites</span>
+            <span class="menu-card-category">Cupcakes</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">Cupcakes (box of 6)</h3>
+            <p class="menu-card-desc">Six soft cupcakes with vanilla, chocolate, and strawberry buttercream swirls.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price-wrap">
+                <span class="menu-card-price-label">Price</span>
+                <span class="menu-card-price">PKR 1,800</span>
+              </div>
+              <div class="menu-card-actions">
+                <div class="qty-selector" aria-label="Select quantity">
+                  <button type="button" class="qty-btn" data-action="minus" data-id="5" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display" id="card-qty-5">1</span>
+                  <button type="button" class="qty-btn" data-action="plus" data-id="5" aria-label="Increase quantity">+</button>
+                </div>
+                <button type="button" class="btn-add-order" data-action="add" data-id="5" id="add-btn-5">
+                  <span>Add to Order</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 6 -->
+        <article class="menu-card" data-item-id="6">
+          <div class="menu-card-img-wrap emoji-card-header">
+            <span class="menu-emoji">🍪</span>
+            <span class="menu-card-badge">Chewy</span>
+            <span class="menu-card-category">Cookies</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">Chocolate Chip Cookies (box of 6)</h3>
+            <p class="menu-card-desc">Warm, chewy cookies packed with melted chocolate chunks and sea salt.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price-wrap">
+                <span class="menu-card-price-label">Price</span>
+                <span class="menu-card-price">PKR 1,450</span>
+              </div>
+              <div class="menu-card-actions">
+                <div class="qty-selector" aria-label="Select quantity">
+                  <button type="button" class="qty-btn" data-action="minus" data-id="6" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display" id="card-qty-6">1</span>
+                  <button type="button" class="qty-btn" data-action="plus" data-id="6" aria-label="Increase quantity">+</button>
+                </div>
+                <button type="button" class="btn-add-order" data-action="add" data-id="6" id="add-btn-6">
+                  <span>Add to Order</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 7 -->
+        <article class="menu-card" data-item-id="7">
+          <div class="menu-card-img-wrap emoji-card-header">
+            <span class="menu-emoji">🍰</span>
+            <span class="menu-card-badge">Creamy</span>
+            <span class="menu-card-category">Desserts</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">Cheesecake Slice</h3>
+            <p class="menu-card-desc">Classic creamy New York cheesecake slice on a golden butter biscuit crust.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price-wrap">
+                <span class="menu-card-price-label">Price</span>
+                <span class="menu-card-price">PKR 950</span>
+              </div>
+              <div class="menu-card-actions">
+                <div class="qty-selector" aria-label="Select quantity">
+                  <button type="button" class="qty-btn" data-action="minus" data-id="7" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display" id="card-qty-7">1</span>
+                  <button type="button" class="qty-btn" data-action="plus" data-id="7" aria-label="Increase quantity">+</button>
+                </div>
+                <button type="button" class="btn-add-order" data-action="add" data-id="7" id="add-btn-7">
+                  <span>Add to Order</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 8 -->
+        <article class="menu-card" data-item-id="8">
+          <div class="menu-card-img-wrap emoji-card-header">
+            <span class="menu-emoji">🥐</span>
+            <span class="menu-card-badge">Warm & Gooey</span>
+            <span class="menu-card-category">Pastries</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">Cinnamon Rolls (box of 4)</h3>
+            <p class="menu-card-desc">Fluffy rolled buns filled with brown sugar cinnamon and sweet cream glaze.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price-wrap">
+                <span class="menu-card-price-label">Price</span>
+                <span class="menu-card-price">PKR 1,600</span>
+              </div>
+              <div class="menu-card-actions">
+                <div class="qty-selector" aria-label="Select quantity">
+                  <button type="button" class="qty-btn" data-action="minus" data-id="8" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display" id="card-qty-8">1</span>
+                  <button type="button" class="qty-btn" data-action="plus" data-id="8" aria-label="Increase quantity">+</button>
+                </div>
+                <button type="button" class="btn-add-order" data-action="add" data-id="8" id="add-btn-8">
+                  <span>Add to Order</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 9 -->
+        <article class="menu-card" data-item-id="9">
+          <div class="menu-card-img-wrap emoji-card-header">
+            <span class="menu-emoji">🍞</span>
+            <span class="menu-card-badge">Chai Time</span>
+            <span class="menu-card-category">Tea Cakes</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">Tea Cake</h3>
+            <p class="menu-card-desc">Traditional soft and buttery golden loaf cake. Fresh and tender, perfect with chai.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price-wrap">
+                <span class="menu-card-price-label">Price</span>
+                <span class="menu-card-price">PKR 1,200</span>
+              </div>
+              <div class="menu-card-actions">
+                <div class="qty-selector" aria-label="Select quantity">
+                  <button type="button" class="qty-btn" data-action="minus" data-id="9" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display" id="card-qty-9">1</span>
+                  <button type="button" class="qty-btn" data-action="plus" data-id="9" aria-label="Increase quantity">+</button>
+                </div>
+                <button type="button" class="btn-add-order" data-action="add" data-id="9" id="add-btn-9">
+                  <span>Add to Order</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 10 -->
+        <article class="menu-card" data-item-id="10">
+          <div class="menu-card-img-wrap emoji-card-header">
+            <span class="menu-emoji">🍩</span>
+            <span class="menu-card-badge">Must Try</span>
+            <span class="menu-card-category">Donuts</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-title">Donuts (box of 4)</h3>
+            <p class="menu-card-desc">Four soft, airy donuts with chocolate fudge frosting and sweet honey glaze.</p>
+            <div class="menu-card-footer">
+              <div class="menu-card-price-wrap">
+                <span class="menu-card-price-label">Price</span>
+                <span class="menu-card-price">PKR 1,400</span>
+              </div>
+              <div class="menu-card-actions">
+                <div class="qty-selector" aria-label="Select quantity">
+                  <button type="button" class="qty-btn" data-action="minus" data-id="10" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display" id="card-qty-10">1</span>
+                  <button type="button" class="qty-btn" data-action="plus" data-id="10" aria-label="Increase quantity">+</button>
+                </div>
+                <button type="button" class="btn-add-order" data-action="add" data-id="10" id="add-btn-10">
+                  <span>Add to Order</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -1659,8 +1814,8 @@
               We deliver across Lahore: Gulberg, DHA, Cantt, Model Town, Johar Town, Bahria Town, and nearby areas.
             </p>
             <div class="delivery-hours-card">
-              <div class="delivery-hours-title">Opening Hours</div>
-              <div class="delivery-hours-text" id="delivery-hours-text">Open every day: 10:00 AM to 9:00 PM (Please order 1 day before)</div>
+              <div class="delivery-hours-title">Delivery Time</div>
+              <div class="delivery-hours-text" id="delivery-hours-text">Order anytime. Same-day delivery in 30-40 minutes.</div>
             </div>
           </div>
 
@@ -1720,7 +1875,7 @@
         <span class="order-badge-pill" id="order-bar-count">0 items</span>
         <span class="order-total-text" id="order-bar-total">PKR 0</span>
       </div>
-      <button type="button" class="btn-view-order" id="btn-open-order" aria-haspopup="dialog">
+      <button type="button" class="btn-view-order" id="btn-open-order" data-action="open-order" aria-haspopup="dialog">
         <span>View Order</span>
         <svg class="icon-svg" style="width: 18px; height: 18px;" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
       </button>
@@ -1736,7 +1891,7 @@
         <h3 class="order-modal-title" id="modal-heading">
           <span>🛒</span> Your Order
         </h3>
-        <button type="button" class="order-modal-close" id="btn-close-order" aria-label="Close order panel">&times;</button>
+        <button type="button" class="order-modal-close" id="btn-close-order" data-action="close-order" aria-label="Close order panel">&times;</button>
       </div>
 
       <div class="order-modal-body">
@@ -1765,7 +1920,7 @@
           <span class="order-total-amount" id="order-modal-total">PKR 0</span>
         </div>
 
-        <a href="#" class="btn-send-whatsapp-order" id="btn-send-whatsapp-order" target="_blank" rel="noopener noreferrer">
+        <a href="#" class="btn-send-whatsapp-order" id="btn-send-whatsapp-order" data-action="send" target="_blank" rel="noopener noreferrer">
           <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.65 7.89 8.02 8.49 8.02 9.71C8.02 10.93 8.91 12.11 9.03 12.27C9.15 12.44 10.74 14.9 13.21 15.96C15.26 16.84 15.68 16.67 16.12 16.63C16.57 16.59 17.55 16.05 17.76 15.48C17.96 14.9 17.96 14.41 17.9 14.31C17.84 14.21 17.68 14.15 17.44 14.03C17.19 13.9 15.99 13.31 15.77 13.23C15.54 13.15 15.38 13.11 15.22 13.35C15.05 13.59 14.58 14.15 14.44 14.31C14.3 14.47 14.16 14.49 13.91 14.37C13.67 14.25 12.87 13.98 11.93 13.15C11.2 12.5 10.7 11.69 10.56 11.45C10.42 11.21 10.54 11.08 10.66 10.96C10.77 10.85 10.91 10.67 11.03 10.53C11.16 10.39 11.2 10.29 11.28 10.13C11.36 9.97 11.32 9.83 11.26 9.71C11.2 9.59 10.74 8.44 10.54 7.97C10.35 7.51 10.16 7.57 10.02 7.56C9.88 7.55 9.72 7.54 9.53 7.34Z"/></svg>
           <span id="send-order-btn-label">Send Order on WhatsApp</span>
         </a>
@@ -1773,322 +1928,7 @@
     </div>
   </div>
 
-  <!-- =========================================================================
-       APPLICATION LOGIC & CART SYSTEM
-       ========================================================================= -->
-  <script>
-    (function initApp() {
-      const cfg = window.SITE_CONFIG;
-      if (!cfg) return;
-
-      // 1. WhatsApp Number Sanitation (digits only)
-      const waNumber = String(cfg.whatsappNumber || "923233732647").replace(/\D/g, "");
-
-      // Simple WhatsApp URL builder
-      function makeWaUrl(msg) {
-        return "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(msg);
-      }
-
-      // Simple Order Message for Header/Hero/Footer
-      const simpleOrderUrl = makeWaUrl("Hello! I want to place an order.");
-
-      // Setup simple buttons
-      const navBtn = document.getElementById("nav-whatsapp-btn");
-      if (navBtn) navBtn.href = simpleOrderUrl;
-
-      const heroBtn = document.getElementById("hero-whatsapp-btn");
-      if (heroBtn) heroBtn.href = simpleOrderUrl;
-
-      const contactWaBtn = document.getElementById("contact-whatsapp-link");
-      if (contactWaBtn) contactWaBtn.href = simpleOrderUrl;
-
-      const delivWaBtn = document.getElementById("delivery-whatsapp-btn");
-      if (delivWaBtn) delivWaBtn.href = simpleOrderUrl;
-
-      const footWaBtn = document.getElementById("footer-whatsapp-link");
-      if (footWaBtn) footWaBtn.href = simpleOrderUrl;
-
-      // Clean phone number for tel: link
-      const phoneDigits = String(cfg.phoneDisplay || "0323 3732647").replace(/[\s-]/g, "");
-      const contactPhone = document.getElementById("contact-phone-link");
-      if (contactPhone) {
-        contactPhone.href = "tel:" + phoneDigits;
-        contactPhone.textContent = cfg.phoneDisplay;
-      }
-      const footerPhone = document.getElementById("footer-phone-link");
-      if (footerPhone) {
-        footerPhone.href = "tel:" + phoneDigits;
-        footerPhone.textContent = cfg.phoneDisplay;
-      }
-
-      // Instagram Links
-      const instaLink = document.getElementById("contact-instagram-link");
-      if (instaLink) {
-        instaLink.href = cfg.instagramUrl;
-        instaLink.textContent = cfg.instagramHandle;
-      }
-      const footInsta = document.getElementById("footer-instagram-link");
-      if (footInsta) footInsta.href = cfg.instagramUrl;
-
-      // =======================================================================
-      // CART STATE & METHODS
-      // =======================================================================
-      let cart = []; // items: { id, name, pricePKR, qty }
-      const itemCardQty = {}; // card-level quantity selections before adding
-
-      // Initialize card quantities
-      cfg.menu.forEach(item => {
-        itemCardQty[item.id] = 1;
-      });
-
-      // Render Menu Items with Quantity Selectors
-      const menuGrid = document.getElementById("menu-grid");
-      if (menuGrid && Array.isArray(cfg.menu)) {
-        menuGrid.innerHTML = cfg.menu.map(item => `
-          <article class="menu-card" data-item-id="${item.id}">
-            <div class="menu-card-img-wrap">
-              <img src="${item.image}" alt="${item.name}" loading="lazy">
-              ${item.badge ? `<span class="menu-card-badge">${item.badge}</span>` : ""}
-              <span class="menu-card-category">${item.category || "Bakery"}</span>
-            </div>
-            <div class="menu-card-body">
-              <h3 class="menu-card-title">${item.name}</h3>
-              <p class="menu-card-desc">${item.description}</p>
-              <div class="menu-card-footer">
-                <div class="menu-card-price-wrap">
-                  <span class="menu-card-price-label">Price</span>
-                  <span class="menu-card-price">PKR ${Number(item.pricePKR).toLocaleString()}</span>
-                </div>
-                <div class="menu-card-actions">
-                  <div class="qty-selector" aria-label="Select quantity">
-                    <button type="button" class="qty-btn" onclick="window.changeCardQty(${item.id}, -1)" aria-label="Decrease quantity">−</button>
-                    <span class="qty-display" id="card-qty-${item.id}">1</span>
-                    <button type="button" class="qty-btn" onclick="window.changeCardQty(${item.id}, 1)" aria-label="Increase quantity">+</button>
-                  </div>
-                  <button type="button" class="btn-add-order" id="add-btn-${item.id}" onclick="window.addItemToCart(${item.id})">
-                    <span>Add to Order</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </article>
-        `).join("");
-      }
-
-      // Exposed window helper to change quantity selector on cards
-      window.changeCardQty = function(itemId, delta) {
-        let current = itemCardQty[itemId] || 1;
-        current += delta;
-        if (current < 1) current = 1;
-        if (current > 50) current = 50;
-        itemCardQty[itemId] = current;
-        const disp = document.getElementById("card-qty-" + itemId);
-        if (disp) disp.textContent = current;
-      };
-
-      // Add item to cart
-      window.addItemToCart = function(itemId) {
-        const itemDef = cfg.menu.find(m => m.id === itemId);
-        if (!itemDef) return;
-
-        const qtyToAdd = itemCardQty[itemId] || 1;
-        const existing = cart.find(c => c.id === itemId);
-
-        if (existing) {
-          existing.qty += qtyToAdd;
-        } else {
-          cart.push({
-            id: itemDef.id,
-            name: itemDef.name,
-            pricePKR: Number(itemDef.pricePKR),
-            qty: qtyToAdd
-          });
-        }
-
-        // Button feedback
-        const btn = document.getElementById("add-btn-" + itemId);
-        if (btn) {
-          const originalText = btn.innerHTML;
-          btn.classList.add("added");
-          btn.innerHTML = "<span>✓ Added!</span>";
-          setTimeout(() => {
-            btn.classList.remove("added");
-            btn.innerHTML = originalText;
-          }, 1200);
-        }
-
-        updateCartUI();
-      };
-
-      // Change quantity inside Cart Modal
-      window.changeCartItemQty = function(itemId, delta) {
-        const item = cart.find(c => c.id === itemId);
-        if (!item) return;
-
-        item.qty += delta;
-        if (item.qty <= 0) {
-          cart = cart.filter(c => c.id !== itemId);
-        }
-        updateCartUI();
-      };
-
-      // Remove item completely from cart
-      window.removeCartItem = function(itemId) {
-        cart = cart.filter(c => c.id !== itemId);
-        updateCartUI();
-      };
-
-      // Recalculate and update all cart UI elements
-      function updateCartUI() {
-        const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
-        const totalPrice = cart.reduce((sum, item) => sum + (item.pricePKR * item.qty), 0);
-
-        // Update Floating Order Bar
-        const barCount = document.getElementById("order-bar-count");
-        if (barCount) {
-          barCount.textContent = totalCount + (totalCount === 1 ? " item" : " items");
-        }
-
-        const barTotal = document.getElementById("order-bar-total");
-        if (barTotal) {
-          barTotal.textContent = "PKR " + totalPrice.toLocaleString();
-        }
-
-        // Update Modal Total
-        const modalTotal = document.getElementById("order-modal-total");
-        if (modalTotal) {
-          modalTotal.textContent = "PKR " + totalPrice.toLocaleString();
-        }
-
-        // Render Cart Items in Modal
-        const listEl = document.getElementById("order-items-list");
-        const emptyMsg = document.getElementById("order-empty-message");
-        const formInputs = document.getElementById("order-form-inputs");
-        const sendBtn = document.getElementById("btn-send-whatsapp-order");
-        const sendBtnLabel = document.getElementById("send-order-btn-label");
-
-        if (cart.length === 0) {
-          if (listEl) listEl.innerHTML = "";
-          if (emptyMsg) emptyMsg.style.display = "block";
-          if (formInputs) formInputs.style.display = "none";
-
-          if (sendBtn) {
-            sendBtn.removeAttribute("href");
-            sendBtn.setAttribute("disabled", "true");
-            sendBtn.style.pointerEvents = "none";
-          }
-          if (sendBtnLabel) sendBtnLabel.textContent = "Add an item first";
-        } else {
-          if (emptyMsg) emptyMsg.style.display = "none";
-          if (formInputs) formInputs.style.display = "flex";
-
-          if (listEl) {
-            listEl.innerHTML = cart.map(item => `
-              <li class="order-item-row">
-                <div class="order-item-details">
-                  <div class="order-item-name">${item.name}</div>
-                  <div class="order-item-unit-price">PKR ${item.pricePKR.toLocaleString()} each</div>
-                </div>
-                <div class="order-item-row-controls">
-                  <div class="qty-selector" style="padding: 0.15rem;">
-                    <button type="button" class="qty-btn" style="width: 24px; height: 24px; font-size: 0.8rem;" onclick="window.changeCartItemQty(${item.id}, -1)">−</button>
-                    <span class="qty-display" style="width: 22px; font-size: 0.82rem;">${item.qty}</span>
-                    <button type="button" class="qty-btn" style="width: 24px; height: 24px; font-size: 0.8rem;" onclick="window.changeCartItemQty(${item.id}, 1)">+</button>
-                  </div>
-                  <div class="order-item-line-total">PKR ${(item.pricePKR * item.qty).toLocaleString()}</div>
-                  <button type="button" class="order-remove-btn" onclick="window.removeCartItem(${item.id})" title="Remove item" aria-label="Remove item">✕</button>
-                </div>
-              </li>
-            `).join("");
-          }
-
-          if (sendBtn) {
-            sendBtn.removeAttribute("disabled");
-            sendBtn.style.pointerEvents = "auto";
-          }
-          if (sendBtnLabel) sendBtnLabel.textContent = "Send Order on WhatsApp";
-
-          updateWhatsAppOrderLink();
-        }
-      }
-
-      // Build the formatted WhatsApp order text as requested
-      function buildOrderMessage() {
-        if (cart.length === 0) return "";
-
-        let message = "Hello Sweet Crumbs! I want to place an order:\n\n";
-
-        cart.forEach((item, index) => {
-          const lineTotal = item.pricePKR * item.qty;
-          message += (index + 1) + ". " + item.name + " x " + item.qty + " = PKR " + lineTotal.toLocaleString() + "\n";
-        });
-
-        const total = cart.reduce((sum, item) => sum + (item.pricePKR * item.qty), 0);
-        message += "\nTotal: PKR " + total.toLocaleString();
-
-        const nameInput = document.getElementById("order-customer-name");
-        const addrInput = document.getElementById("order-customer-address");
-
-        const name = nameInput ? nameInput.value.trim() : "";
-        const address = addrInput ? addrInput.value.trim() : "";
-
-        if (name) {
-          message += "\nName: " + name;
-        }
-        if (address) {
-          message += "\nAddress: " + address;
-        }
-
-        message += "\n\nPlease confirm my order. Thank you!";
-        return message;
-      }
-
-      function updateWhatsAppOrderLink() {
-        const sendBtn = document.getElementById("btn-send-whatsapp-order");
-        if (!sendBtn || cart.length === 0) return;
-
-        const msg = buildOrderMessage();
-        const url = "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(msg);
-        sendBtn.href = url;
-      }
-
-      // Listen for typing in Name & Address inputs
-      const nameInput = document.getElementById("order-customer-name");
-      const addrInput = document.getElementById("order-customer-address");
-      if (nameInput) nameInput.addEventListener("input", updateWhatsAppOrderLink);
-      if (addrInput) addrInput.addEventListener("input", updateWhatsAppOrderLink);
-
-      // Modal Open / Close Logic
-      const modalBackdrop = document.getElementById("order-modal-backdrop");
-      const btnOpenOrder = document.getElementById("btn-open-order");
-      const btnCloseOrder = document.getElementById("btn-close-order");
-
-      function openModal() {
-        if (modalBackdrop) modalBackdrop.classList.add("open");
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeModal() {
-        if (modalBackdrop) modalBackdrop.classList.remove("open");
-        document.body.style.overflow = "";
-      }
-
-      if (btnOpenOrder) btnOpenOrder.addEventListener("click", openModal);
-      if (btnCloseOrder) btnCloseOrder.addEventListener("click", closeModal);
-
-      if (modalBackdrop) {
-        modalBackdrop.addEventListener("click", (e) => {
-          if (e.target === modalBackdrop) closeModal();
-        });
-      }
-
-      window.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeModal();
-      });
-
-      // Initial Cart UI Render
-      updateCartUI();
-    })();
-  </script>
+  <!-- Application Logic & WhatsApp Ordering System -->
+  <script src="app.js" defer></script>
 </body>
 </html>
