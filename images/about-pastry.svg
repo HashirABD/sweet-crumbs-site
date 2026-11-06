@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aboutBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF4EC"/>
+      <stop offset="100%" stop-color="#ECDCCE"/>
+    </linearGradient>
+    <linearGradient id="chocLayer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4E2313"/>
+      <stop offset="100%" stop-color="#69331C"/>
+    </linearGradient>
+    <linearGradient id="creamLayer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFF8EE"/>
+      <stop offset="100%" stop-color="#F5EAD9"/>
+    </linearGradient>
+    <filter id="pastryShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#462211" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="450" fill="url(#aboutBg)"/>
+
+  <!-- Bakery Marble Board -->
+  <ellipse cx="300" cy="360" rx="240" ry="42" fill="#E8DEC9" filter="url(#pastryShadow)"/>
+  <ellipse cx="300" cy="355" rx="230" ry="38" fill="#F8F3EA"/>
+
+  <!-- Artisanal Cake Slice & Brownie Stack -->
+
+  <!-- Brownie Square Left -->
+  <g filter="url(#pastryShadow)">
+    <path d="M120 310 L195 285 L255 315 L180 340 Z" fill="#3D180B"/>
+    <path d="M120 310 L180 340 L180 370 L120 340 Z" fill="#2C0F06"/>
+    <path d="M180 340 L255 315 L255 345 L180 370 Z" fill="#4B2010"/>
+    <!-- Crackly surface texture -->
+    <path d="M140 312 Q170 305 195 320" stroke="#68341D" stroke-width="2" fill="none"/>
+    <path d="M180 300 Q205 315 225 310" stroke="#68341D" stroke-width="2" fill="none"/>
+    <!-- Salt / cocoa powder flakes -->
+    <circle cx="170" cy="315" r="2" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="210" cy="305" r="2" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="190" cy="325" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+
+  <!-- Brownie Square on Top -->
+  <g filter="url(#pastryShadow)">
+    <path d="M135 270 L205 248 L260 275 L190 297 Z" fill="#4A1E0E"/>
+    <path d="M135 270 L190 297 L190 322 L135 295 Z" fill="#321308"/>
+    <path d="M190 297 L260 275 L260 300 L190 322 Z" fill="#582613"/>
+    <!-- Drizzle -->
+    <path d="M145 275 Q170 285 200 272 Q230 260 250 280" stroke="#250B03" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Multi-layered Gourmet Cake Slice Center/Right -->
+  <g filter="url(#pastryShadow)">
+    <!-- Base Plate -->
+    <ellipse cx="380" cy="335" rx="130" ry="22" fill="#E8DDD3"/>
+    
+    <!-- Cake Slice Wedge -->
+    <!-- Back / side -->
+    <path d="M310 180 L460 230 L460 320 L310 270 Z" fill="url(#chocLayer)"/>
+    <!-- Top triangular face -->
+    <path d="M310 180 L460 230 L400 170 Z" fill="#542613"/>
+
+    <!-- Cake Layers (Side View) -->
+    <!-- Sponge Layer 1 -->
+    <path d="M310 250 L460 300 L460 320 L310 270 Z" fill="#451D0E"/>
+    <!-- Cream Filling 1 -->
+    <path d="M310 242 L460 292 L460 298 L310 248 Z" fill="url(#creamLayer)"/>
+    <!-- Sponge Layer 2 -->
+    <path d="M310 220 L460 270 L460 242 L310 192 Z" fill="#4E2313"/>
+    <!-- Cream Filling 2 -->
+    <path d="M310 212 L460 262 L460 268 L310 218 Z" fill="url(#creamLayer)"/>
+    <!-- Top Frosting -->
+    <path d="M310 180 L460 230 L460 236 L310 186 Z" fill="#FFFDF8"/>
+
+    <!-- Whipped Cream Dollop & Raspberry on Cake Top -->
+    <circle cx="395" cy="180" r="16" fill="#FFFBF5"/>
+    <circle cx="390" cy="174" r="10" fill="#C52828"/>
+    <circle cx="387" cy="170" r="2" fill="#EAA028"/>
+    <circle cx="394" cy="173" r="2" fill="#EAA028"/>
+  </g>
+
+  <!-- Baking Whisk (Stainless steel & wood) -->
+  <g transform="rotate(24 490 140)">
+    <!-- Whisk Handle -->
+    <rect x="480" y="60" width="16" height="70" rx="8" fill="#B37C52"/>
+    <!-- Whisk Collar -->
+    <rect x="478" y="130" width="20" height="12" rx="3" fill="#D3C7BD"/>
+    <!-- Whisk Wires -->
+    <path d="M482 142 C465 170 460 220 488 235 C516 220 511 170 494 142" stroke="#9A8C80" stroke-width="2.5" fill="none"/>
+    <path d="M485 142 C475 165 470 205 488 215 C506 205 501 165 491 142" stroke="#9A8C80" stroke-width="2" fill="none"/>
+    <path d="M488 142 L488 235" stroke="#9A8C80" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Floating Sparkles & Heart -->
+  <polygon points="100,160 102,165 107,167 102,169 100,174 98,169 93,167 98,165" fill="#C86A2E"/>
+  <polygon points="490,290 492,295 497,297 492,299 490,304 488,299 483,297 488,295" fill="#C86A2E"/>
+  <path d="M280 120 C270 105 250 115 260 130 L280 148 L300 130 C310 115 290 105 280 120 Z" fill="#C86A2E" opacity="0.85"/>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgRV" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCF5F5"/>
+      <stop offset="100%" stop-color="#F5E4E4"/>
+    </linearGradient>
+    <filter id="rvShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#4E1515" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="500" height="375" fill="url(#bgRV)"/>
+
+  <!-- Ceramic Plate -->
+  <ellipse cx="250" cy="275" rx="190" ry="40" fill="#E8DDD3" filter="url(#rvShadow)"/>
+  <ellipse cx="250" cy="270" rx="180" ry="36" fill="#FFFFFF"/>
+
+  <!-- Red Velvet Cake Slice -->
+  <g filter="url(#rvShadow)">
+    <!-- Base cake shape -->
+    <!-- Side / Cut surface -->
+    <path d="M160 120 L350 185 L350 265 L160 200 Z" fill="#991B28"/>
+    <!-- Top triangular face -->
+    <path d="M160 120 L350 185 L285 105 Z" fill="#FFFDF8"/>
+
+    <!-- Red Velvet Sponge & White Cream Cheese Layers -->
+    <!-- Sponge 1 Bottom -->
+    <path d="M160 185 L350 250 L350 265 L160 200 Z" fill="#881521"/>
+    <!-- Cream Cheese Layer 1 -->
+    <path d="M160 173 L350 238 L350 250 L160 185 Z" fill="#FFFBF5"/>
+    <!-- Sponge 2 Middle -->
+    <path d="M160 148 L350 213 L350 238 L160 173 Z" fill="#991B28"/>
+    <!-- Cream Cheese Layer 2 -->
+    <path d="M160 136 L350 201 L350 213 L160 148 Z" fill="#FFFBF5"/>
+    <!-- Sponge 3 Top -->
+    <path d="M160 120 L350 185 L350 201 L160 136 Z" fill="#A82332"/>
+
+    <!-- Back Curved Wall of the Cake with Cream Cheese Frosting -->
+    <path d="M285 105 L350 185 L350 265 Q290 220 285 185 Z" fill="#F4EDE4"/>
+
+    <!-- Red Velvet Crumb Sprinkles on Top -->
+    <circle cx="210" cy="130" r="3" fill="#881521"/>
+    <circle cx="230" cy="140" r="2.5" fill="#881521"/>
+    <circle cx="250" cy="135" r="3" fill="#881521"/>
+    <circle cx="270" cy="150" r="2" fill="#881521"/>
+    <circle cx="290" cy="145" r="3" fill="#881521"/>
+    <circle cx="240" cy="155" r="2.5" fill="#881521"/>
+
+    <!-- Luxurious Cream Cheese Rosette on Top -->
+    <ellipse cx="200" cy="125" rx="18" ry="12" fill="#FFFFFF"/>
+    <circle cx="200" cy="120" r="10" fill="#FFFBF5"/>
+    <path d="M195 120 Q200 112 205 120" stroke="#E5D8C8" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Crumb details on plate -->
+  <circle cx="140" cy="240" r="3" fill="#881521" opacity="0.8"/>
+  <circle cx="148" cy="245" r="2" fill="#881521" opacity="0.8"/>
+  <circle cx="365" cy="265" r="2.5" fill="#881521" opacity="0.8"/>
+</svg>

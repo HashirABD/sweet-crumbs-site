@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgB" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF7F0"/>
+      <stop offset="100%" stop-color="#EFE0D0"/>
+    </linearGradient>
+    <filter id="bShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#3B180A" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="500" height="375" fill="url(#bgB)"/>
+
+  <!-- Bakery parchment paper -->
+  <polygon points="70,90 430,70 415,310 85,290" fill="#FAF5E8" filter="url(#bShadow)"/>
+
+  <!-- Brownie 1 (Left Back) -->
+  <g filter="url(#bShadow)">
+    <polygon points="120,120 230,105 270,165 160,180" fill="#3A170A"/>
+    <polygon points="120,120 160,180 160,215 120,155" fill="#240D05"/>
+    <polygon points="160,180 270,165 270,200 160,215" fill="#4E2110"/>
+    <path d="M140,135 Q180,125 210,145" stroke="#68341D" stroke-width="2" fill="none"/>
+    <circle cx="180" cy="145" r="1.5" fill="#FFF"/>
+  </g>
+
+  <!-- Brownie 2 (Right Back) -->
+  <g filter="url(#bShadow)">
+    <polygon points="250,110 360,95 400,155 290,170" fill="#3A170A"/>
+    <polygon points="250,110 290,170 290,205 250,145" fill="#240D05"/>
+    <polygon points="290,170 400,155 400,190 290,205" fill="#4E2110"/>
+    <circle cx="330" cy="130" r="1.5" fill="#FFF"/>
+  </g>
+
+  <!-- Brownie 3 (Center Front - Hero) -->
+  <g filter="url(#bShadow)">
+    <polygon points="170,170 300,150 345,225 215,245" fill="#3D180B"/>
+    <polygon points="170,170 215,245 215,285 170,210" fill="#260E05"/>
+    <polygon points="215,245 345,225 345,265 215,285" fill="#522413"/>
+    
+    <!-- Glossy crackly top surface details -->
+    <path d="M195,185 Q250,175 285,200" stroke="#753C22" stroke-width="2.5" fill="none"/>
+    <path d="M230,165 Q265,185 295,175" stroke="#753C22" stroke-width="2" fill="none"/>
+    
+    <!-- Molten Chocolate Drizzle -->
+    <path d="M185,180 Q240,210 270,190 Q300,170 330,210" stroke="#1F0A03" stroke-width="5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Flaky Maldon Sea Salt -->
+    <rect x="225" y="195" width="4" height="4" transform="rotate(25 225 195)" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="270" y="180" width="4" height="4" transform="rotate(45 270 180)" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="250" y="215" width="3" height="3" transform="rotate(10 250 215)" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="290" y="210" width="3" height="3" transform="rotate(60 290 210)" fill="#FFFFFF" opacity="0.95"/>
+  </g>
+
+  <!-- Bakery Badge Tag -->
+  <g transform="translate(380, 290)">
+    <circle cx="25" cy="25" r="24" fill="#C86A2E"/>
+    <text x="25" y="29" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#FFF" text-anchor="middle">FUDGY</text>
+  </g>
+</svg>

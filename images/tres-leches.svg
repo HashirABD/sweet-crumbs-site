@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgTL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCF9F3"/>
+      <stop offset="100%" stop-color="#F2E6D5"/>
+    </linearGradient>
+    <linearGradient id="tubGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#F0E5D8" stop-opacity="0.75"/>
+    </linearGradient>
+    <filter id="tlShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#442612" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="500" height="375" fill="url(#bgTL)"/>
+
+  <!-- Tub Shadow -->
+  <ellipse cx="250" cy="305" rx="150" ry="22" fill="#D8C8B6" opacity="0.6"/>
+
+  <!-- Clear Dessert Tub (Body) -->
+  <g filter="url(#tlShadow)">
+    <path d="M140 140 L165 290 Q250 315 335 290 L360 140 Z" fill="url(#tubGrad)" stroke="#E0D2C2" stroke-width="2"/>
+    
+    <!-- Milk-soaked sponge cake layer (bottom) -->
+    <path d="M163 240 L166 288 Q250 313 334 288 L337 240 Q250 262 163 240 Z" fill="#EED0A4"/>
+    
+    <!-- Tres Leches Milk & Condensed Cream Layer -->
+    <path d="M156 195 L163 240 Q250 262 337 240 L344 195 Q250 216 156 195 Z" fill="#FFF5E5"/>
+    
+    <!-- Whipped Dairy Cream Layer -->
+    <path d="M148 145 L156 195 Q250 216 344 195 L352 145 Q250 165 148 145 Z" fill="#FFFFFF"/>
+
+    <!-- Top Surface / Rim -->
+    <ellipse cx="250" cy="140" rx="112" ry="26" fill="#F8F3EA" stroke="#D3C3B2" stroke-width="2"/>
+    
+    <!-- Biscoff Speculoos Spread Layer on Top -->
+    <ellipse cx="250" cy="140" rx="106" ry="23" fill="#B36528"/>
+
+    <!-- Speculoos Drizzle swirls in Cream -->
+    <path d="M170 142 Q200 132 230 145 Q260 156 290 140 Q315 132 330 144" stroke="#7A390C" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M185 135 Q220 148 260 135 Q290 145 315 136" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- Biscoff Biscuit in Center -->
+    <g transform="translate(210, 95) rotate(-10)">
+      <rect x="0" y="0" width="85" height="42" rx="6" fill="#C27435" stroke="#9E541E" stroke-width="2"/>
+      <rect x="5" y="5" width="75" height="32" rx="4" fill="#B26325"/>
+      <circle cx="15" cy="15" r="2" fill="#E69F65"/>
+      <circle cx="70" cy="15" r="2" fill="#E69F65"/>
+      <circle cx="15" cy="27" r="2" fill="#E69F65"/>
+      <circle cx="70" cy="27" r="2" fill="#E69F65"/>
+      <text x="42" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#E89F62" text-anchor="middle">BISCOFF</text>
+    </g>
+
+    <!-- Crushed Biscuit Crumbs Scattered on Top -->
+    <circle cx="185" cy="150" r="3" fill="#8C4412"/>
+    <circle cx="195" cy="145" r="2" fill="#C67938"/>
+    <circle cx="310" cy="148" r="2.5" fill="#8C4412"/>
+    <circle cx="325" cy="142" r="3" fill="#C67938"/>
+    <circle cx="270" cy="152" r="2" fill="#8C4412"/>
+  </g>
+</svg>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF4EC"/>
+      <stop offset="100%" stop-color="#EED9C4"/>
+    </linearGradient>
+    <linearGradient id="cakeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#F5E6D3"/>
+    </linearGradient>
+    <linearGradient id="dripGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5A2814"/>
+      <stop offset="100%" stop-color="#3B170B"/>
+    </linearGradient>
+    <linearGradient id="standGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E8DDD3"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#D8C9BC"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#4A2612" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle decorative bakery pattern circles -->
+  <circle cx="90" cy="80" r="45" fill="#EAD5BF" opacity="0.4"/>
+  <circle cx="510" cy="90" r="55" fill="#EAD5BF" opacity="0.35"/>
+  <circle cx="540" cy="380" r="35" fill="#EAD5BF" opacity="0.3"/>
+
+  <!-- Cake Stand -->
+  <g filter="url(#shadow)">
+    <!-- Stand Base -->
+    <ellipse cx="300" cy="390" rx="110" ry="16" fill="url(#standGrad)"/>
+    <!-- Stand Pillar -->
+    <path d="M280 320 L275 385 Q300 390 325 385 L320 320 Z" fill="url(#standGrad)"/>
+    <!-- Stand Plate -->
+    <ellipse cx="300" cy="320" rx="190" ry="24" fill="url(#standGrad)"/>
+    <ellipse cx="300" cy="316" rx="180" ry="20" fill="#FBF9F6"/>
+  </g>
+
+  <!-- Cake Tier 1 (Bottom) -->
+  <g filter="url(#shadow)">
+    <!-- Cake Body -->
+    <path d="M160 210 L160 300 Q300 325 440 300 L440 210 Z" fill="url(#cakeGrad)"/>
+    <ellipse cx="300" cy="210" rx="140" ry="22" fill="#FFFBF5"/>
+    
+    <!-- Chocolate Ganache Drip -->
+    <path d="M158 210 Q200 232 300 232 Q400 232 442 210 
+             Q435 240 430 250 Q425 225 410 225 
+             Q395 225 390 265 Q385 228 360 228
+             Q340 228 335 275 Q330 225 300 225
+             Q270 225 265 260 Q260 226 235 226
+             Q215 226 210 270 Q205 224 185 224
+             Q170 224 165 245 Z" fill="url(#dripGrad)"/>
+  </g>
+
+  <!-- Cake Tier 2 (Top) -->
+  <g filter="url(#shadow)">
+    <path d="M200 130 L200 195 Q300 212 400 195 L400 130 Z" fill="url(#cakeGrad)"/>
+    <ellipse cx="300" cy="130" rx="100" ry="18" fill="#FFFDF8"/>
+    
+    <!-- Top Drips -->
+    <path d="M198 130 Q240 148 300 148 Q360 148 402 130
+             Q395 155 390 162 Q385 142 370 142
+             Q350 142 345 175 Q340 144 320 144
+             Q295 144 290 180 Q285 142 260 142
+             Q240 142 235 168 Q230 142 210 142
+             Q202 142 198 130 Z" fill="url(#dripGrad)"/>
+  </g>
+
+  <!-- Toppings: Berries & Cream Rosettes -->
+  <!-- Whipped cream swirls -->
+  <circle cx="250" cy="120" r="14" fill="#FFF9F0"/>
+  <circle cx="280" cy="115" r="16" fill="#FFF9F0"/>
+  <circle cx="320" cy="115" r="16" fill="#FFF9F0"/>
+  <circle cx="350" cy="120" r="14" fill="#FFF9F0"/>
+  <circle cx="300" cy="108" r="17" fill="#FFFBF5"/>
+
+  <!-- Fresh Strawberries / Berries on Top -->
+  <path d="M272 108 C265 95 285 85 290 98 C295 85 315 95 308 108 C302 118 278 118 272 108 Z" fill="#C52828"/>
+  <circle cx="288" cy="95" r="2" fill="#E8A020"/>
+  <circle cx="295" cy="100" r="2" fill="#E8A020"/>
+  <circle cx="284" cy="104" r="2" fill="#E8A020"/>
+  <!-- Leaf -->
+  <path d="M290 92 Q285 82 278 86 Q285 90 290 92 Z" fill="#4E8D42"/>
+  <path d="M290 92 Q295 82 302 86 Q295 90 290 92 Z" fill="#4E8D42"/>
+
+  <!-- Additional Blueberries -->
+  <circle cx="328" cy="108" r="7" fill="#3D3768"/>
+  <circle cx="326" cy="106" r="2" fill="#6A62A3"/>
+  <circle cx="242" cy="114" r="6" fill="#3D3768"/>
+  <circle cx="360" cy="115" r="6" fill="#3D3768"/>
+
+  <!-- Gold sprinkles / sparkles -->
+  <polygon points="170,170 173,176 179,179 173,182 170,188 167,182 161,179 167,176" fill="#D99B26"/>
+  <polygon points="425,160 427,165 432,167 427,169 425,174 423,169 418,167 423,165" fill="#D99B26"/>
+  <polygon points="210,85 212,89 216,91 212,93 210,97 208,93 204,91 208,89" fill="#D99B26"/>
+  <polygon points="390,75 392,79 396,81 392,83 390,87 388,83 384,81 388,79" fill="#D99B26"/>
+</svg>

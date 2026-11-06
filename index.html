@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Crumbs Lahore | Fresh Home Bakery</title>
+  <meta name="description" content="Fresh home-baked cakes, brownies, and cookies in Lahore. Order easily on WhatsApp.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧁</text></svg>">
+
+  <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- =========================================================================
+       MASTER CLIENT CONFIGURATION BLOCK
+       Change this block to update business details in one place!
+       ========================================================================= -->
+  <script>
+    const SITE_CONFIG = {
+      // 1. Business Info
+      businessName: "Sweet Crumbs Lahore",
+      tagline: "Fresh Cakes & Brownies Made for You",
+      subTagline: "We bake fresh cakes, brownies, and cookies with pure butter. Made to order and delivered to your door in Lahore.",
+      orderNotice: "Fresh home bakery in Lahore • Baked to order daily",
+
+      // 2. Contact & Socials
+      phoneDisplay: "0323 3732647",
+      whatsappNumber: "923233732647", // Digits only, no +, no spaces
+      instagramHandle: "@sweetcrumbslahore",
+      instagramUrl: "https://www.instagram.com/sweetcrumbslahore",
+      location: "Gulberg III, Lahore",
+      googleMapsUrl: "https://maps.google.com/?q=Gulberg+III+Lahore",
+      deliveryInfo: "We deliver across Lahore: Gulberg, DHA, Cantt, Model Town, Johar Town, Bahria Town, and nearby areas.",
+      openingHours: "Open every day: 10:00 AM to 9:00 PM (Please order 1 day before)",
+
+      // 3. Brand Theme & Colors
+      colors: {
+        primary: "#7A381E",         // Warm cocoa brown
+        primaryDark: "#582613",     // Deep chocolate brown
+        primaryLight: "#F5ECE1",    // Warm cream accent
+        accent: "#C86A2E",          // Warm cinnamon amber
+        accentHover: "#A8531D",
+        whatsapp: "#25D366",        // WhatsApp green
+        whatsappDark: "#1EBE5D",
+        bgPage: "#FDF9F4",          // Soft bakery cream
+        bgCard: "#FFFFFF",          // White card
+        textMain: "#2C1E18",        // Deep readable brown
+        textMuted: "#72645B",       // Warm grey-brown
+        borderLight: "#EFE5D8"      // Soft border
+      },
+
+      // 4. Hero Section Badges
+      heroBadges: [
+        { icon: "✨", text: "100% Pure Butter" },
+        { icon: "🍫", text: "Real Chocolate" },
+        { icon: "🛵", text: "Fast Lahore Delivery" }
+      ],
+
+      // 5. How to Order Steps (Simple English)
+      howToOrder: [
+        {
+          step: "1",
+          title: "Choose Your Items",
+          desc: "Browse our menu, choose your quantity, and tap 'Add to Order'."
+        },
+        {
+          step: "2",
+          title: "Open WhatsApp",
+          desc: "Tap 'Send Order on WhatsApp'. Your full order list is written automatically."
+        },
+        {
+          step: "3",
+          title: "We Confirm & Bake",
+          desc: "We confirm your delivery time and bake your treats fresh for you!"
+        }
+      ],
+
+      // 6. About Section
+      about: {
+        badge: "About Us",
+        heading: "Baked at Home with Real Butter",
+        paragraphs: [
+          "Sweet Crumbs is a home bakery in Lahore. We love baking fresh treats for birthdays, tea time, and celebrations.",
+          "We only use real butter and good chocolate. We never use premixes or artificial flavors. Every order is baked fresh on the day of delivery."
+        ],
+        stats: [
+          { value: "100%", label: "Fresh & Halal" },
+          { value: "Made to Order", label: "Never Stale" },
+          { value: "All Lahore", label: "Home Delivery" }
+        ]
+      },
+
+      // 7. Menu Items (8 items with local SVG images & simple descriptions)
+      menu: [
+        {
+          id: 1,
+          name: "Belgian Fudgy Brownies (Box of 6)",
+          category: "Brownies",
+          badge: "Bestseller",
+          pricePKR: 1950,
+          description: "Soft, rich chocolate brownies with a crispy top. Baked with dark chocolate.",
+          image: "./images/brownies.svg"
+        },
+        {
+          id: 2,
+          name: "Red Velvet Cake (2 lbs)",
+          category: "Cakes",
+          badge: "Popular",
+          pricePKR: 2850,
+          description: "Soft red cake with layers of sweet cream cheese frosting.",
+          image: "./images/red-velvet.svg"
+        },
+        {
+          id: 3,
+          name: "Lotus Biscoff Tres Leches",
+          category: "Dessert Tubs",
+          badge: "Must Try",
+          pricePKR: 1650,
+          description: "Sweet milk cake topped with fresh cream and Lotus biscuit spread.",
+          image: "./images/tres-leches.svg"
+        },
+        {
+          id: 4,
+          name: "Chocolate Chunk Cookies (Pack of 4)",
+          category: "Cookies",
+          badge: "Fresh Daily",
+          pricePKR: 1350,
+          description: "Warm, chewy cookies with real dark chocolate chunks and sea salt.",
+          image: "./images/cookies.svg"
+        },
+        {
+          id: 5,
+          name: "Nutella Hazelnut Cake (2.5 lbs)",
+          category: "Cakes",
+          badge: "Special",
+          pricePKR: 3750,
+          description: "Rich chocolate cake with Nutella cream and roasted hazelnuts.",
+          image: "./images/hazelnut-cake.svg"
+        },
+        {
+          id: 6,
+          name: "Lemon Tea Cake",
+          category: "Tea Cakes",
+          badge: "Light & Sweet",
+          pricePKR: 1500,
+          description: "Soft, buttery lemon cake with sweet lemon glaze on top.",
+          image: "./images/lemon-loaf.svg"
+        },
+        {
+          id: 7,
+          name: "Pistachio Cupcakes (Box of 4)",
+          category: "Cupcakes",
+          badge: "Customer Favorite",
+          pricePKR: 1750,
+          description: "Soft pistachio cupcakes with sweet rose cream and crushed nuts.",
+          image: "./images/cupcakes.svg"
+        },
+        {
+          id: 8,
+          name: "Salted Caramel Tartlets (Pack of 4)",
+          category: "Tarts",
+          badge: "Crispy & Gooey",
+          pricePKR: 1850,
+          description: "Crispy pastry cups filled with sweet caramel and crunchy pecans.",
+          image: "./images/tartlets.svg"
+        }
+      ]
+    };
+  </script>
+
+  <!-- Theme Stylesheet (Variables with solid fallbacks) -->
+  <style id="dynamic-theme-vars">
+    :root {
+      --color-primary: #7A381E;
+      --color-primary-dark: #582613;
+      --color-primary-light: #F5ECE1;
+      --color-accent: #C86A2E;
+      --color-accent-hover: #A8531D;
+      --color-whatsapp: #25D366;
+      --color-whatsapp-dark: #1EBE5D;
+      --color-bg-page: #FDF9F4;
+      --color-bg-card: #FFFFFF;
+      --color-text-main: #2C1E18;
+      --color-text-muted: #72645B;
+      --color-border-light: #EFE5D8;
+    }
+  </style>
+
+  <style>
+    /* Reset & Base Rules */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--color-bg-page, #FDF9F4);
+      color: var(--color-text-main, #2C1E18);
+      line-height: 1.6;
+      overflow-x: hidden;
+      /* Safe padding so bottom order bar never covers any footer or buttons */
+      padding-bottom: 110px;
+    }
+
+    h1, h2, h3, h4, .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Top Announcement Bar */
+    .announcement-bar {
+      background: var(--color-primary-dark, #582613);
+      color: #FFF6EC;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 0.55rem 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* Sticky Navigation Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 80;
+      background: rgba(253, 249, 244, 0.98);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--color-border-light, #EFE5D8);
+      padding: 0.85rem 0;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    .brand-logo-icon {
+      font-size: 1.75rem;
+      line-height: 1;
+    }
+
+    .brand-logo-text {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-primary, #7A381E);
+      white-space: nowrap;
+    }
+
+    .brand-logo-city {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-accent, #C86A2E);
+      display: block;
+      margin-top: -3px;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+
+    .nav-links a {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-text-main, #2C1E18);
+    }
+
+    .nav-links a:hover {
+      color: var(--color-accent, #C86A2E);
+    }
+
+    .nav-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--color-whatsapp, #25D366);
+      color: #FFFFFF !important;
+      font-size: 0.875rem;
+      font-weight: 700;
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.28);
+      white-space: nowrap;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-cta-btn:hover {
+      background-color: var(--color-whatsapp-dark, #1EBE5D);
+      transform: translateY(-1px);
+    }
+
+    /* Common Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.625rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.25s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary, #7A381E);
+      color: #FFFFFF !important;
+      box-shadow: 0 6px 18px rgba(122, 56, 30, 0.25);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-primary-dark, #582613);
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background-color: var(--color-whatsapp, #25D366);
+      color: #FFFFFF !important;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: var(--color-whatsapp-dark, #1EBE5D);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 3.5rem 0 4rem;
+      background: linear-gradient(180deg, rgba(253, 249, 244, 0.8) 0%, rgba(246, 237, 226, 0.7) 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 3.5rem;
+      }
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--color-primary-light, #F5ECE1);
+      color: var(--color-primary, #7A381E);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+      font-size: 2.35rem;
+      color: var(--color-primary-dark, #582613);
+      margin-bottom: 1.25rem;
+      line-height: 1.18;
+    }
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 3.25rem;
+      }
+    }
+
+    .hero-description {
+      font-size: 1.05rem;
+      color: var(--color-text-muted, #72645B);
+      margin-bottom: 1.75rem;
+      max-width: 580px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.875rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-badges-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--color-border-light, #EFE5D8);
+    }
+
+    .hero-badge-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--color-text-main, #2C1E18);
+    }
+
+    .hero-image-wrap {
+      position: relative;
+    }
+
+    .hero-image-card {
+      position: relative;
+      border-radius: 1.75rem;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(92, 43, 24, 0.14);
+      background-color: #EBDCD0;
+      aspect-ratio: 4 / 3.4;
+    }
+
+    .hero-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-floating-card {
+      position: absolute;
+      bottom: -1rem;
+      left: 1.5rem;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      padding: 0.85rem 1.25rem;
+      border-radius: 1.25rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      max-width: calc(100% - 3rem);
+    }
+
+    .hero-floating-card .badge-icon {
+      font-size: 1.75rem;
+    }
+
+    .hero-floating-card .badge-title {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--color-primary, #7A381E);
+    }
+
+    .hero-floating-card .badge-sub {
+      font-size: 0.75rem;
+      color: var(--color-text-muted, #72645B);
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-accent, #C86A2E);
+      margin-bottom: 0.625rem;
+    }
+
+    .section-title {
+      font-size: 2.15rem;
+      color: var(--color-primary-dark, #582613);
+      margin-bottom: 0.85rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 2.6rem;
+      }
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--color-text-muted, #72645B);
+      line-height: 1.6;
+    }
+
+    /* How To Order Section (3 Easy Steps) */
+    .how-section {
+      padding: 4rem 0;
+      background: #FFFDF9;
+      border-top: 1px solid var(--color-border-light, #EFE5D8);
+      border-bottom: 1px solid var(--color-border-light, #EFE5D8);
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .how-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .how-card {
+      background: var(--color-bg-card, #FFFFFF);
+      border: 1px solid var(--color-border-light, #EFE5D8);
+      border-radius: 1.25rem;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 6px 18px rgba(92, 43, 24, 0.04);
+    }
+
+    .how-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-primary-light, #F5ECE1);
+      color: var(--color-primary, #7A381E);
+      font-size: 1.25rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .how-card h3 {
+      font-size: 1.15rem;
+      color: var(--color-primary-dark, #582613);
+      margin-bottom: 0.5rem;
+    }
+
+    .how-card p {
+      font-size: 0.88rem;
+      color: var(--color-text-muted, #72645B);
+      line-height: 1.5;
+    }
+
+    /* Menu Section - 8 Items Grid */
+    .menu-section {
+      padding: 5rem 0;
+      background-color: var(--color-bg-page, #FDF9F4);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    @media (min-width: 640px) {
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .menu-card {
+      background: var(--color-bg-card, #FFFFFF);
+      border-radius: 1.25rem;
+      overflow: hidden;
+      border: 1px solid var(--color-border-light, #EFE5D8);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(92, 43, 24, 0.1);
+      border-color: rgba(200, 106, 46, 0.4);
+    }
+
+    .menu-card-img-wrap {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      background-color: #F7EFE4;
+    }
+
+    .menu-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .menu-card-badge {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(4px);
+      color: var(--color-primary-dark, #582613);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      letter-spacing: 0.02em;
+    }
+
+    .menu-card-category {
+      position: absolute;
+      bottom: 0.75rem;
+      right: 0.75rem;
+      background: rgba(44, 30, 24, 0.82);
+      backdrop-filter: blur(4px);
+      color: #FFFFFF;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.25rem 0.55rem;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .menu-card-body {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .menu-card-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--color-primary-dark, #582613);
+      margin-bottom: 0.45rem;
+      line-height: 1.3;
+    }
+
+    .menu-card-desc {
+      font-size: 0.85rem;
+      color: var(--color-text-muted, #72645B);
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .menu-card-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--color-border-light, #EFE5D8);
+    }
+
+    .menu-card-price-wrap {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    .menu-card-price-label {
+      font-size: 0.72rem;
+      color: var(--color-text-muted, #72645B);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    .menu-card-price {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-primary, #7A381E);
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* Quantity Controls & Add Button */
+    .menu-card-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .qty-selector {
+      display: flex;
+      align-items: center;
+      background: #F5ECE1;
+      border-radius: 999px;
+      padding: 0.25rem;
+      border: 1px solid #E5D5C2;
+    }
+
+    .qty-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: none;
+      background: #FFFFFF;
+      color: var(--color-primary, #7A381E);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+      transition: background 0.15s ease;
+    }
+
+    .qty-btn:hover {
+      background: var(--color-primary, #7A381E);
+      color: #FFFFFF;
+    }
+
+    .qty-display {
+      width: 28px;
+      text-align: center;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--color-text-main, #2C1E18);
+    }
+
+    .btn-add-order {
+      flex: 1;
+      background-color: var(--color-primary, #7A381E);
+      color: #FFFFFF;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.65rem 0.85rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      box-shadow: 0 4px 12px rgba(122, 56, 30, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .btn-add-order:hover {
+      background-color: var(--color-primary-dark, #582613);
+      transform: translateY(-1px);
+    }
+
+    .btn-add-order.added {
+      background-color: var(--color-whatsapp, #25D366);
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, #F8F0E5 0%, #FAF5EE 100%);
+      border-top: 1px solid var(--color-border-light, #EFE5D8);
+      border-bottom: 1px solid var(--color-border-light, #EFE5D8);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+    }
+
+    .about-image-card {
+      position: relative;
+      border-radius: 1.75rem;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(92, 43, 24, 0.12);
+      aspect-ratio: 4 / 3.4;
+      background-color: #EBDCD0;
+    }
+
+    .about-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-content-badge {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-accent, #C86A2E);
+      display: inline-block;
+      margin-bottom: 0.625rem;
+    }
+
+    .about-heading {
+      font-size: 2.15rem;
+      color: var(--color-primary-dark, #582613);
+      margin-bottom: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .about-heading {
+        font-size: 2.5rem;
+      }
+    }
+
+    .about-paragraph {
+      font-size: 0.98rem;
+      color: var(--color-text-muted, #72645B);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .about-stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border-light, #EFE5D8);
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .about-stat-item {
+      text-align: center;
+    }
+
+    .about-stat-val {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-primary, #7A381E);
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .about-stat-lbl {
+      font-size: 0.75rem;
+      color: var(--color-text-muted, #72645B);
+      font-weight: 600;
+      margin-top: 0.15rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 5rem 0;
+      background-color: var(--color-bg-page, #FDF9F4);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 840px) {
+      .contact-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+    }
+
+    .contact-card {
+      background: var(--color-bg-card, #FFFFFF);
+      border: 1px solid var(--color-border-light, #EFE5D8);
+      border-radius: 1.5rem;
+      padding: 2.25rem;
+      box-shadow: 0 10px 30px rgba(92, 43, 24, 0.05);
+    }
+
+    .contact-card-title {
+      font-size: 1.5rem;
+      color: var(--color-primary-dark, #582613);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      list-style: none;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .contact-icon-bubble {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-primary-light, #F5ECE1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary, #7A381E);
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-info h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted, #72645B);
+      margin-bottom: 0.2rem;
+      font-family: inherit;
+      font-weight: 600;
+    }
+
+    .contact-item-info p, .contact-item-info a {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-primary-dark, #582613);
+    }
+
+    .contact-item-info a:hover {
+      color: var(--color-accent, #C86A2E);
+    }
+
+    .delivery-box {
+      background: var(--color-primary-dark, #582613);
+      color: #FFF6EC;
+      border-radius: 1.5rem;
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 12px 32px rgba(88, 38, 19, 0.2);
+    }
+
+    .delivery-box h3 {
+      font-size: 1.45rem;
+      margin-bottom: 0.85rem;
+      color: #FFFFFF;
+    }
+
+    .delivery-box p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .delivery-hours-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 1rem;
+      padding: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .delivery-hours-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--color-accent, #C86A2E);
+      margin-bottom: 0.25rem;
+    }
+
+    .delivery-hours-text {
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--color-primary-dark, #582613);
+      color: #ECE0D1;
+      padding: 3.5rem 0 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+      }
+    }
+
+    .footer-brand h3 {
+      font-size: 1.5rem;
+      color: #FFFFFF;
+      margin-bottom: 0.65rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      opacity: 0.85;
+      max-width: 320px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.95rem;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-family: inherit;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      font-size: 0.88rem;
+    }
+
+    .footer-col a {
+      color: #ECE0D1;
+      opacity: 0.85;
+    }
+
+    .footer-col a:hover {
+      color: var(--color-accent, #C86A2E);
+      opacity: 1;
+      padding-left: 3px;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      font-size: 0.8125rem;
+      opacity: 0.7;
+    }
+
+    /* =========================================================================
+       TASK 1: FLOATING ORDER BAR & ORDER PANEL (CART)
+       ========================================================================= */
+    .floating-order-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 2px solid var(--color-primary, #7A381E);
+      box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.12);
+      z-index: 100;
+      padding: 0.75rem 1rem;
+    }
+
+    .floating-order-content {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .floating-order-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .order-badge-pill {
+      background: var(--color-primary, #7A381E);
+      color: #FFFFFF;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .order-total-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-primary-dark, #582613);
+    }
+
+    .btn-view-order {
+      background: var(--color-whatsapp, #25D366);
+      color: #FFFFFF !important;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 0.6rem 1.25rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-view-order:hover {
+      background: var(--color-whatsapp-dark, #1EBE5D);
+      transform: translateY(-1px);
+    }
+
+    /* Modal / Drawer Overlay */
+    .order-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    @media (min-width: 640px) {
+      .order-modal-backdrop {
+        align-items: center;
+        padding: 1rem;
+      }
+    }
+
+    .order-modal-backdrop.open {
+      display: flex;
+    }
+
+    .order-modal {
+      background: #FFFFFF;
+      width: 100%;
+      max-width: 520px;
+      max-height: 88vh;
+      border-radius: 1.5rem 1.5rem 0 0;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      animation: slideUp 0.25s ease-out;
+      overflow: hidden;
+    }
+
+    @media (min-width: 640px) {
+      .order-modal {
+        border-radius: 1.5rem;
+        max-height: 82vh;
+      }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    .order-modal-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--color-border-light, #EFE5D8);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #FAF6F0;
+    }
+
+    .order-modal-title {
+      font-size: 1.25rem;
+      color: var(--color-primary-dark, #582613);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .order-modal-close {
+      background: #FFFFFF;
+      border: 1px solid #E0D4C5;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #666;
+      cursor: pointer;
+    }
+
+    .order-modal-close:hover {
+      background: #F0E6D8;
+      color: #000;
+    }
+
+    .order-modal-body {
+      padding: 1.25rem 1.5rem;
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* Cart Items List */
+    .order-items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      list-style: none;
+    }
+
+    .order-item-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.75rem;
+      background: #FDF9F4;
+      border: 1px solid var(--color-border-light, #EFE5D8);
+      border-radius: 0.75rem;
+    }
+
+    .order-item-details {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .order-item-name {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--color-primary-dark, #582613);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .order-item-unit-price {
+      font-size: 0.8rem;
+      color: var(--color-text-muted, #72645B);
+    }
+
+    .order-item-row-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .order-item-line-total {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--color-primary, #7A381E);
+      min-width: 75px;
+      text-align: right;
+    }
+
+    .order-remove-btn {
+      background: transparent;
+      border: none;
+      color: #A84030;
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 0.2rem;
+      line-height: 1;
+    }
+
+    .order-empty-message {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--color-text-muted, #72645B);
+      font-size: 0.95rem;
+    }
+
+    /* Optional Form Inputs */
+    .order-form-inputs {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .order-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--color-border-light, #EFE5D8);
+      border-radius: 0.75rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--color-text-main, #2C1E18);
+      background: #FFFFFF;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .order-input:focus {
+      border-color: var(--color-primary, #7A381E);
+    }
+
+    textarea.order-input {
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    /* Modal Footer */
+    .order-modal-footer {
+      padding: 1.25rem 1.5rem;
+      background: #FAF6F0;
+      border-top: 1px solid var(--color-border-light, #EFE5D8);
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .order-total-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    .order-total-label {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-primary-dark, #582613);
+    }
+
+    .order-total-amount {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--color-primary, #7A381E);
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .btn-send-whatsapp-order {
+      width: 100%;
+      background: var(--color-whatsapp, #25D366);
+      color: #FFFFFF !important;
+      font-size: 1rem;
+      font-weight: 800;
+      padding: 0.9rem 1.5rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-send-whatsapp-order:hover:not(:disabled) {
+      background: var(--color-whatsapp-dark, #1EBE5D);
+      transform: translateY(-2px);
+    }
+
+    .btn-send-whatsapp-order:disabled {
+      background: #C4B9AD;
+      cursor: not-allowed;
+      box-shadow: none;
+      opacity: 0.8;
+    }
+
+    /* SVG Helper */
+    .icon-svg {
+      display: inline-block;
+      width: 1.25em;
+      height: 1.25em;
+      vertical-align: -0.2em;
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" id="announcement-text">
+    Fresh home bakery in Lahore • Baked to order daily
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#hero" class="brand-logo" id="brand-logo-link">
+          <span class="brand-logo-icon">🧁</span>
+          <div>
+            <div class="brand-logo-text" id="brand-name">Sweet Crumbs</div>
+            <span class="brand-logo-city" id="brand-city">Lahore</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#menu">Our Menu</a></li>
+          <li><a href="#how-to-order">How to Order</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="https://wa.me/923233732647?text=Hello!%20I%20want%20to%20place%20an%20order." class="nav-cta-btn" id="nav-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.65 7.89 8.02 8.49 8.02 9.71C8.02 10.93 8.91 12.11 9.03 12.27C9.15 12.44 10.74 14.9 13.21 15.96C15.26 16.84 15.68 16.67 16.12 16.63C16.57 16.59 17.55 16.05 17.76 15.48C17.96 14.9 17.96 14.41 17.9 14.31C17.84 14.21 17.68 14.15 17.44 14.03C17.19 13.9 15.99 13.31 15.77 13.23C15.54 13.15 15.38 13.11 15.22 13.35C15.05 13.59 14.58 14.15 14.44 14.31C14.3 14.47 14.16 14.49 13.91 14.37C13.67 14.25 12.87 13.98 11.93 13.15C11.2 12.5 10.7 11.69 10.56 11.45C10.42 11.21 10.54 11.08 10.66 10.96C10.77 10.85 10.91 10.67 11.03 10.53C11.16 10.39 11.2 10.29 11.28 10.13C11.36 9.97 11.32 9.83 11.26 9.71C11.2 9.59 10.74 8.44 10.54 7.97C10.35 7.51 10.16 7.57 10.02 7.56C9.88 7.55 9.72 7.54 9.53 7.34Z"/></svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span>✨</span> <span id="hero-tag-text">Home Bakery in Lahore</span>
+          </div>
+          <h1 class="hero-title" id="hero-title-text">
+            Fresh Cakes & Brownies Made for You
+          </h1>
+          <p class="hero-description" id="hero-desc-text">
+            We bake fresh cakes, brownies, and cookies with pure butter. Made to order and delivered to your door in Lahore.
+          </p>
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary">
+              <span>See Our Menu</span>
+              <svg class="icon-svg" viewBox="0 0 24 24"><path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></svg>
+            </a>
+            <a href="https://wa.me/923233732647?text=Hello!%20I%20want%20to%20place%20an%20order." class="btn btn-whatsapp" id="hero-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+              <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.65 7.89 8.02 8.49 8.02 9.71C8.02 10.93 8.91 12.11 9.03 12.27C9.15 12.44 10.74 14.9 13.21 15.96C15.26 16.84 15.68 16.67 16.12 16.63C16.57 16.59 17.55 16.05 17.76 15.48C17.96 14.9 17.96 14.41 17.9 14.31C17.84 14.21 17.68 14.15 17.44 14.03C17.19 13.9 15.99 13.31 15.77 13.23C15.54 13.15 15.38 13.11 15.22 13.35C15.05 13.59 14.58 14.15 14.44 14.31C14.3 14.47 14.16 14.49 13.91 14.37C13.67 14.25 12.87 13.98 11.93 13.15C11.2 12.5 10.7 11.69 10.56 11.45C10.42 11.21 10.54 11.08 10.66 10.96C10.77 10.85 10.91 10.67 11.03 10.53C11.16 10.39 11.2 10.29 11.28 10.13C11.36 9.97 11.32 9.83 11.26 9.71C11.2 9.59 10.74 8.44 10.54 7.97C10.35 7.51 10.16 7.57 10.02 7.56C9.88 7.55 9.72 7.54 9.53 7.34Z"/></svg>
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
+          <div class="hero-badges-list" id="hero-badges-container">
+            <div class="hero-badge-item"><span>✨</span><span>100% Pure Butter</span></div>
+            <div class="hero-badge-item"><span>🍫</span><span>Real Chocolate</span></div>
+            <div class="hero-badge-item"><span>🛵</span><span>Fast Lahore Delivery</span></div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <div class="hero-image-card">
+            <img src="./images/hero-cake.svg" alt="Fresh cake from Sweet Crumbs Lahore">
+          </div>
+          <div class="hero-floating-card">
+            <span class="badge-icon">🧁</span>
+            <div>
+              <div class="badge-title">Baked Fresh Daily</div>
+              <div class="badge-sub">Small batches with real butter</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Order Section (TASK 2) -->
+  <section class="how-section" id="how-to-order">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-badge">Simple Steps</span>
+        <h2 class="section-title">How to Order</h2>
+        <p class="section-subtitle">
+          Ordering your fresh bakery treats takes less than 1 minute.
+        </p>
+      </div>
+
+      <div class="how-grid" id="how-grid-container">
+        <div class="how-card">
+          <div class="how-number">1</div>
+          <h3>Choose Your Items</h3>
+          <p>Pick what you want from our menu, select the quantity, and tap "Add to Order".</p>
+        </div>
+        <div class="how-card">
+          <div class="how-number">2</div>
+          <h3>Open WhatsApp</h3>
+          <p>Tap "Send Order on WhatsApp". Your whole order is written out for you automatically.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-number">3</div>
+          <h3>We Confirm & Bake</h3>
+          <p>We confirm your delivery time and bake your treats fresh for you!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section (TASK 1: Quantity selector and Add to Order) -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Fresh Bakes</span>
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-subtitle">
+          Choose what you want, set your quantity, and tap "Add to Order".
+        </p>
+      </div>
+
+      <div class="menu-grid" id="menu-grid">
+        <!-- Rendered dynamically from SITE_CONFIG.menu -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-card">
+          <img src="./images/about-pastry.svg" alt="Fresh home baking at Sweet Crumbs Lahore">
+        </div>
+
+        <div class="about-content">
+          <span class="about-content-badge" id="about-badge">About Us</span>
+          <h2 class="about-heading" id="about-heading">Baked at Home with Real Butter</h2>
+          <div id="about-paragraphs">
+            <p class="about-paragraph">
+              Sweet Crumbs is a home bakery in Lahore. We love baking fresh treats for birthdays, tea time, and celebrations.
+            </p>
+            <p class="about-paragraph">
+              We only use real butter and good chocolate. We never use premixes or artificial flavors. Every order is baked fresh on the day of delivery.
+            </p>
+          </div>
+          <div class="about-stats-row" id="about-stats-container">
+            <div class="about-stat-item">
+              <div class="about-stat-val">100%</div>
+              <div class="about-stat-lbl">Fresh & Halal</div>
+            </div>
+            <div class="about-stat-item">
+              <div class="about-stat-val">Made to Order</div>
+              <div class="about-stat-lbl">Never Stale</div>
+            </div>
+            <div class="about-stat-item">
+              <div class="about-stat-val">All Lahore</div>
+              <div class="about-stat-lbl">Home Delivery</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Get In Touch</span>
+        <h2 class="section-title">Contact & Delivery</h2>
+        <p class="section-subtitle">
+          Call us or send a message on WhatsApp anytime.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3 class="contact-card-title">
+            <span>📍</span> Call or Message Us
+          </h3>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <div class="contact-icon-bubble">📞</div>
+              <div class="contact-item-info">
+                <h4>Call Us</h4>
+                <a href="tel:03233732647" id="contact-phone-link">0323 3732647</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon-bubble">💬</div>
+              <div class="contact-item-info">
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/923233732647?text=Hello!%20I%20want%20to%20place%20an%20order." id="contact-whatsapp-link" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon-bubble">📸</div>
+              <div class="contact-item-info">
+                <h4>Instagram</h4>
+                <a href="https://www.instagram.com/sweetcrumbslahore" id="contact-instagram-link" target="_blank" rel="noopener noreferrer">@sweetcrumbslahore</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon-bubble">📌</div>
+              <div class="contact-item-info">
+                <h4>Kitchen Location</h4>
+                <a href="https://maps.google.com/?q=Gulberg+III+Lahore" id="contact-location-link" target="_blank" rel="noopener noreferrer">Gulberg III, Lahore</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="delivery-box">
+          <div>
+            <h3>🛵 Delivery in Lahore</h3>
+            <p id="delivery-info-text">
+              We deliver across Lahore: Gulberg, DHA, Cantt, Model Town, Johar Town, Bahria Town, and nearby areas.
+            </p>
+            <div class="delivery-hours-card">
+              <div class="delivery-hours-title">Opening Hours</div>
+              <div class="delivery-hours-text" id="delivery-hours-text">Open every day: 10:00 AM to 9:00 PM (Please order 1 day before)</div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/923233732647?text=Hello!%20I%20want%20to%20place%20an%20order." class="btn btn-whatsapp" id="delivery-whatsapp-btn" target="_blank" rel="noopener noreferrer" style="width: 100%;">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.65 7.89 8.02 8.49 8.02 9.71C8.02 10.93 8.91 12.11 9.03 12.27C9.15 12.44 10.74 14.9 13.21 15.96C15.26 16.84 15.68 16.67 16.12 16.63C16.57 16.59 17.55 16.05 17.76 15.48C17.96 14.9 17.96 14.41 17.9 14.31C17.84 14.21 17.68 14.15 17.44 14.03C17.19 13.9 15.99 13.31 15.77 13.23C15.54 13.15 15.38 13.11 15.22 13.35C15.05 13.59 14.58 14.15 14.44 14.31C14.3 14.47 14.16 14.49 13.91 14.37C13.67 14.25 12.87 13.98 11.93 13.15C11.2 12.5 10.7 11.69 10.56 11.45C10.42 11.21 10.54 11.08 10.66 10.96C10.77 10.85 10.91 10.67 11.03 10.53C11.16 10.39 11.2 10.29 11.28 10.13C11.36 9.97 11.32 9.83 11.26 9.71C11.2 9.59 10.74 8.44 10.54 7.97C10.35 7.51 10.16 7.57 10.02 7.56C9.88 7.55 9.72 7.54 9.53 7.34Z"/></svg>
+            <span>Message on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 id="footer-brand-name">Sweet Crumbs Lahore</h3>
+          <p id="footer-tagline">
+            Fresh cakes, brownies, and cookies baked with real butter and delivered in Lahore.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#how-to-order">How to Order</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:03233732647" id="footer-phone-link">0323 3732647</a></li>
+            <li><a href="https://wa.me/923233732647?text=Hello!%20I%20want%20to%20place%20an%20order." id="footer-whatsapp-link" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/sweetcrumbslahore" id="footer-instagram-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year">2026</span> <strong id="footer-copy-name">Sweet Crumbs Lahore</strong>. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       TASK 1: FLOATING "YOUR ORDER" BAR
+       ========================================================================= -->
+  <aside class="floating-order-bar" id="floating-order-bar" aria-label="Order summary bar">
+    <div class="floating-order-content">
+      <div class="floating-order-info">
+        <span class="order-badge-pill" id="order-bar-count">0 items</span>
+        <span class="order-total-text" id="order-bar-total">PKR 0</span>
+      </div>
+      <button type="button" class="btn-view-order" id="btn-open-order" aria-haspopup="dialog">
+        <span>View Order</span>
+        <svg class="icon-svg" style="width: 18px; height: 18px;" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       TASK 1: ORDER PANEL MODAL / SLIDE-UP DRAWER
+       ========================================================================= -->
+  <div class="order-modal-backdrop" id="order-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+    <div class="order-modal">
+      <div class="order-modal-header">
+        <h3 class="order-modal-title" id="modal-heading">
+          <span>🛒</span> Your Order
+        </h3>
+        <button type="button" class="order-modal-close" id="btn-close-order" aria-label="Close order panel">&times;</button>
+      </div>
+
+      <div class="order-modal-body">
+        <!-- Cart Item Rows -->
+        <ul class="order-items-list" id="order-items-list">
+          <!-- Populated by JavaScript -->
+        </ul>
+
+        <div class="order-empty-message" id="order-empty-message">
+          Your order is empty.<br>Tap "Add to Order" on any item from our menu!
+        </div>
+
+        <!-- Optional Name and Address Fields -->
+        <div class="order-form-inputs" id="order-form-inputs">
+          <label style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary-dark, #582613); text-transform: uppercase;">
+            Optional Details
+          </label>
+          <input type="text" class="order-input" id="order-customer-name" placeholder="Your Name (optional)" autocomplete="name">
+          <textarea class="order-input" id="order-customer-address" placeholder="Delivery Address in Lahore (optional)" rows="2"></textarea>
+        </div>
+      </div>
+
+      <div class="order-modal-footer">
+        <div class="order-total-row">
+          <span class="order-total-label">Total</span>
+          <span class="order-total-amount" id="order-modal-total">PKR 0</span>
+        </div>
+
+        <a href="#" class="btn-send-whatsapp-order" id="btn-send-whatsapp-order" target="_blank" rel="noopener noreferrer">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.65 7.89 8.02 8.49 8.02 9.71C8.02 10.93 8.91 12.11 9.03 12.27C9.15 12.44 10.74 14.9 13.21 15.96C15.26 16.84 15.68 16.67 16.12 16.63C16.57 16.59 17.55 16.05 17.76 15.48C17.96 14.9 17.96 14.41 17.9 14.31C17.84 14.21 17.68 14.15 17.44 14.03C17.19 13.9 15.99 13.31 15.77 13.23C15.54 13.15 15.38 13.11 15.22 13.35C15.05 13.59 14.58 14.15 14.44 14.31C14.3 14.47 14.16 14.49 13.91 14.37C13.67 14.25 12.87 13.98 11.93 13.15C11.2 12.5 10.7 11.69 10.56 11.45C10.42 11.21 10.54 11.08 10.66 10.96C10.77 10.85 10.91 10.67 11.03 10.53C11.16 10.39 11.2 10.29 11.28 10.13C11.36 9.97 11.32 9.83 11.26 9.71C11.2 9.59 10.74 8.44 10.54 7.97C10.35 7.51 10.16 7.57 10.02 7.56C9.88 7.55 9.72 7.54 9.53 7.34Z"/></svg>
+          <span id="send-order-btn-label">Send Order on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       APPLICATION LOGIC & CART SYSTEM
+       ========================================================================= -->
+  <script>
+    (function initApp() {
+      const cfg = window.SITE_CONFIG;
+      if (!cfg) return;
+
+      // 1. WhatsApp Number Sanitation (digits only)
+      const waNumber = String(cfg.whatsappNumber || "923233732647").replace(/\D/g, "");
+
+      // Simple WhatsApp URL builder
+      function makeWaUrl(msg) {
+        return "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(msg);
+      }
+
+      // Simple Order Message for Header/Hero/Footer
+      const simpleOrderUrl = makeWaUrl("Hello! I want to place an order.");
+
+      // Setup simple buttons
+      const navBtn = document.getElementById("nav-whatsapp-btn");
+      if (navBtn) navBtn.href = simpleOrderUrl;
+
+      const heroBtn = document.getElementById("hero-whatsapp-btn");
+      if (heroBtn) heroBtn.href = simpleOrderUrl;
+
+      const contactWaBtn = document.getElementById("contact-whatsapp-link");
+      if (contactWaBtn) contactWaBtn.href = simpleOrderUrl;
+
+      const delivWaBtn = document.getElementById("delivery-whatsapp-btn");
+      if (delivWaBtn) delivWaBtn.href = simpleOrderUrl;
+
+      const footWaBtn = document.getElementById("footer-whatsapp-link");
+      if (footWaBtn) footWaBtn.href = simpleOrderUrl;
+
+      // Clean phone number for tel: link
+      const phoneDigits = String(cfg.phoneDisplay || "0323 3732647").replace(/[\s-]/g, "");
+      const contactPhone = document.getElementById("contact-phone-link");
+      if (contactPhone) {
+        contactPhone.href = "tel:" + phoneDigits;
+        contactPhone.textContent = cfg.phoneDisplay;
+      }
+      const footerPhone = document.getElementById("footer-phone-link");
+      if (footerPhone) {
+        footerPhone.href = "tel:" + phoneDigits;
+        footerPhone.textContent = cfg.phoneDisplay;
+      }
+
+      // Instagram Links
+      const instaLink = document.getElementById("contact-instagram-link");
+      if (instaLink) {
+        instaLink.href = cfg.instagramUrl;
+        instaLink.textContent = cfg.instagramHandle;
+      }
+      const footInsta = document.getElementById("footer-instagram-link");
+      if (footInsta) footInsta.href = cfg.instagramUrl;
+
+      // =======================================================================
+      // CART STATE & METHODS
+      // =======================================================================
+      let cart = []; // items: { id, name, pricePKR, qty }
+      const itemCardQty = {}; // card-level quantity selections before adding
+
+      // Initialize card quantities
+      cfg.menu.forEach(item => {
+        itemCardQty[item.id] = 1;
+      });
+
+      // Render Menu Items with Quantity Selectors
+      const menuGrid = document.getElementById("menu-grid");
+      if (menuGrid && Array.isArray(cfg.menu)) {
+        menuGrid.innerHTML = cfg.menu.map(item => `
+          <article class="menu-card" data-item-id="${item.id}">
+            <div class="menu-card-img-wrap">
+              <img src="${item.image}" alt="${item.name}" loading="lazy">
+              ${item.badge ? `<span class="menu-card-badge">${item.badge}</span>` : ""}
+              <span class="menu-card-category">${item.category || "Bakery"}</span>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">${item.name}</h3>
+              <p class="menu-card-desc">${item.description}</p>
+              <div class="menu-card-footer">
+                <div class="menu-card-price-wrap">
+                  <span class="menu-card-price-label">Price</span>
+                  <span class="menu-card-price">PKR ${Number(item.pricePKR).toLocaleString()}</span>
+                </div>
+                <div class="menu-card-actions">
+                  <div class="qty-selector" aria-label="Select quantity">
+                    <button type="button" class="qty-btn" onclick="window.changeCardQty(${item.id}, -1)" aria-label="Decrease quantity">−</button>
+                    <span class="qty-display" id="card-qty-${item.id}">1</span>
+                    <button type="button" class="qty-btn" onclick="window.changeCardQty(${item.id}, 1)" aria-label="Increase quantity">+</button>
+                  </div>
+                  <button type="button" class="btn-add-order" id="add-btn-${item.id}" onclick="window.addItemToCart(${item.id})">
+                    <span>Add to Order</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        `).join("");
+      }
+
+      // Exposed window helper to change quantity selector on cards
+      window.changeCardQty = function(itemId, delta) {
+        let current = itemCardQty[itemId] || 1;
+        current += delta;
+        if (current < 1) current = 1;
+        if (current > 50) current = 50;
+        itemCardQty[itemId] = current;
+        const disp = document.getElementById("card-qty-" + itemId);
+        if (disp) disp.textContent = current;
+      };
+
+      // Add item to cart
+      window.addItemToCart = function(itemId) {
+        const itemDef = cfg.menu.find(m => m.id === itemId);
+        if (!itemDef) return;
+
+        const qtyToAdd = itemCardQty[itemId] || 1;
+        const existing = cart.find(c => c.id === itemId);
+
+        if (existing) {
+          existing.qty += qtyToAdd;
+        } else {
+          cart.push({
+            id: itemDef.id,
+            name: itemDef.name,
+            pricePKR: Number(itemDef.pricePKR),
+            qty: qtyToAdd
+          });
+        }
+
+        // Button feedback
+        const btn = document.getElementById("add-btn-" + itemId);
+        if (btn) {
+          const originalText = btn.innerHTML;
+          btn.classList.add("added");
+          btn.innerHTML = "<span>✓ Added!</span>";
+          setTimeout(() => {
+            btn.classList.remove("added");
+            btn.innerHTML = originalText;
+          }, 1200);
+        }
+
+        updateCartUI();
+      };
+
+      // Change quantity inside Cart Modal
+      window.changeCartItemQty = function(itemId, delta) {
+        const item = cart.find(c => c.id === itemId);
+        if (!item) return;
+
+        item.qty += delta;
+        if (item.qty <= 0) {
+          cart = cart.filter(c => c.id !== itemId);
+        }
+        updateCartUI();
+      };
+
+      // Remove item completely from cart
+      window.removeCartItem = function(itemId) {
+        cart = cart.filter(c => c.id !== itemId);
+        updateCartUI();
+      };
+
+      // Recalculate and update all cart UI elements
+      function updateCartUI() {
+        const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+        const totalPrice = cart.reduce((sum, item) => sum + (item.pricePKR * item.qty), 0);
+
+        // Update Floating Order Bar
+        const barCount = document.getElementById("order-bar-count");
+        if (barCount) {
+          barCount.textContent = totalCount + (totalCount === 1 ? " item" : " items");
+        }
+
+        const barTotal = document.getElementById("order-bar-total");
+        if (barTotal) {
+          barTotal.textContent = "PKR " + totalPrice.toLocaleString();
+        }
+
+        // Update Modal Total
+        const modalTotal = document.getElementById("order-modal-total");
+        if (modalTotal) {
+          modalTotal.textContent = "PKR " + totalPrice.toLocaleString();
+        }
+
+        // Render Cart Items in Modal
+        const listEl = document.getElementById("order-items-list");
+        const emptyMsg = document.getElementById("order-empty-message");
+        const formInputs = document.getElementById("order-form-inputs");
+        const sendBtn = document.getElementById("btn-send-whatsapp-order");
+        const sendBtnLabel = document.getElementById("send-order-btn-label");
+
+        if (cart.length === 0) {
+          if (listEl) listEl.innerHTML = "";
+          if (emptyMsg) emptyMsg.style.display = "block";
+          if (formInputs) formInputs.style.display = "none";
+
+          if (sendBtn) {
+            sendBtn.removeAttribute("href");
+            sendBtn.setAttribute("disabled", "true");
+            sendBtn.style.pointerEvents = "none";
+          }
+          if (sendBtnLabel) sendBtnLabel.textContent = "Add an item first";
+        } else {
+          if (emptyMsg) emptyMsg.style.display = "none";
+          if (formInputs) formInputs.style.display = "flex";
+
+          if (listEl) {
+            listEl.innerHTML = cart.map(item => `
+              <li class="order-item-row">
+                <div class="order-item-details">
+                  <div class="order-item-name">${item.name}</div>
+                  <div class="order-item-unit-price">PKR ${item.pricePKR.toLocaleString()} each</div>
+                </div>
+                <div class="order-item-row-controls">
+                  <div class="qty-selector" style="padding: 0.15rem;">
+                    <button type="button" class="qty-btn" style="width: 24px; height: 24px; font-size: 0.8rem;" onclick="window.changeCartItemQty(${item.id}, -1)">−</button>
+                    <span class="qty-display" style="width: 22px; font-size: 0.82rem;">${item.qty}</span>
+                    <button type="button" class="qty-btn" style="width: 24px; height: 24px; font-size: 0.8rem;" onclick="window.changeCartItemQty(${item.id}, 1)">+</button>
+                  </div>
+                  <div class="order-item-line-total">PKR ${(item.pricePKR * item.qty).toLocaleString()}</div>
+                  <button type="button" class="order-remove-btn" onclick="window.removeCartItem(${item.id})" title="Remove item" aria-label="Remove item">✕</button>
+                </div>
+              </li>
+            `).join("");
+          }
+
+          if (sendBtn) {
+            sendBtn.removeAttribute("disabled");
+            sendBtn.style.pointerEvents = "auto";
+          }
+          if (sendBtnLabel) sendBtnLabel.textContent = "Send Order on WhatsApp";
+
+          updateWhatsAppOrderLink();
+        }
+      }
+
+      // Build the formatted WhatsApp order text as requested
+      function buildOrderMessage() {
+        if (cart.length === 0) return "";
+
+        let message = "Hello Sweet Crumbs! I want to place an order:\n\n";
+
+        cart.forEach((item, index) => {
+          const lineTotal = item.pricePKR * item.qty;
+          message += (index + 1) + ". " + item.name + " x " + item.qty + " = PKR " + lineTotal.toLocaleString() + "\n";
+        });
+
+        const total = cart.reduce((sum, item) => sum + (item.pricePKR * item.qty), 0);
+        message += "\nTotal: PKR " + total.toLocaleString();
+
+        const nameInput = document.getElementById("order-customer-name");
+        const addrInput = document.getElementById("order-customer-address");
+
+        const name = nameInput ? nameInput.value.trim() : "";
+        const address = addrInput ? addrInput.value.trim() : "";
+
+        if (name) {
+          message += "\nName: " + name;
+        }
+        if (address) {
+          message += "\nAddress: " + address;
+        }
+
+        message += "\n\nPlease confirm my order. Thank you!";
+        return message;
+      }
+
+      function updateWhatsAppOrderLink() {
+        const sendBtn = document.getElementById("btn-send-whatsapp-order");
+        if (!sendBtn || cart.length === 0) return;
+
+        const msg = buildOrderMessage();
+        const url = "https://wa.me/" + waNumber + "?text=" + encodeURIComponent(msg);
+        sendBtn.href = url;
+      }
+
+      // Listen for typing in Name & Address inputs
+      const nameInput = document.getElementById("order-customer-name");
+      const addrInput = document.getElementById("order-customer-address");
+      if (nameInput) nameInput.addEventListener("input", updateWhatsAppOrderLink);
+      if (addrInput) addrInput.addEventListener("input", updateWhatsAppOrderLink);
+
+      // Modal Open / Close Logic
+      const modalBackdrop = document.getElementById("order-modal-backdrop");
+      const btnOpenOrder = document.getElementById("btn-open-order");
+      const btnCloseOrder = document.getElementById("btn-close-order");
+
+      function openModal() {
+        if (modalBackdrop) modalBackdrop.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        if (modalBackdrop) modalBackdrop.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      if (btnOpenOrder) btnOpenOrder.addEventListener("click", openModal);
+      if (btnCloseOrder) btnCloseOrder.addEventListener("click", closeModal);
+
+      if (modalBackdrop) {
+        modalBackdrop.addEventListener("click", (e) => {
+          if (e.target === modalBackdrop) closeModal();
+        });
+      }
+
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+
+      // Initial Cart UI Render
+      updateCartUI();
+    })();
+  </script>
+</body>
+</html>

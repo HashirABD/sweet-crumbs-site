@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgHZ" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF4EE"/>
+      <stop offset="100%" stop-color="#EADBCC"/>
+    </linearGradient>
+    <linearGradient id="chocGanache" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#461E0F"/>
+      <stop offset="100%" stop-color="#280F05"/>
+    </linearGradient>
+    <filter id="hzShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#3A1708" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="500" height="375" fill="url(#bgHZ)"/>
+
+  <!-- Cake Stand -->
+  <g filter="url(#hzShadow)">
+    <ellipse cx="250" cy="305" rx="160" ry="24" fill="#D3C1B2"/>
+    <ellipse cx="250" cy="300" rx="150" ry="20" fill="#EDE4DC"/>
+  </g>
+
+  <!-- Ferrero Hazelnut Cake -->
+  <g filter="url(#hzShadow)">
+    <!-- Cake Body -->
+    <path d="M140 180 L140 280 Q250 305 360 280 L360 180 Z" fill="url(#chocGanache)"/>
+    <ellipse cx="250" cy="180" rx="110" ry="24" fill="#3D180A"/>
+
+    <!-- Nutella / Hazelnut Crunch coating on lower half -->
+    <path d="M140 240 L140 280 Q250 305 360 280 L360 240 Q250 265 140 240 Z" fill="#582914"/>
+    
+    <!-- Chopped roasted hazelnut bits along bottom edge -->
+    <circle cx="160" cy="265" r="3" fill="#DDB280"/>
+    <circle cx="180" cy="275" r="3.5" fill="#C59660"/>
+    <circle cx="210" cy="285" r="4" fill="#DDB280"/>
+    <circle cx="240" cy="290" r="3" fill="#C59660"/>
+    <circle cx="270" cy="288" r="4" fill="#DDB280"/>
+    <circle cx="300" cy="282" r="3.5" fill="#C59660"/>
+    <circle cx="330" cy="272" r="3" fill="#DDB280"/>
+    <circle cx="350" cy="262" r="3" fill="#C59660"/>
+
+    <!-- Dripping Ganache from rim -->
+    <path d="M140 180 Q190 198 250 198 Q310 198 360 180 
+             Q350 215 345 225 Q340 195 320 195
+             Q300 195 295 235 Q290 196 265 196
+             Q240 196 235 240 Q230 195 205 195
+             Q180 195 175 220 Q170 194 150 194
+             Q143 194 140 180 Z" fill="#200B03"/>
+
+    <!-- Cream Rosettes around top -->
+    <circle cx="180" cy="175" r="14" fill="#4B2211"/>
+    <circle cx="215" cy="170" r="15" fill="#4B2211"/>
+    <circle cx="250" cy="168" r="16" fill="#4B2211"/>
+    <circle cx="285" cy="170" r="15" fill="#4B2211"/>
+    <circle cx="320" cy="175" r="14" fill="#4B2211"/>
+
+    <!-- Ferrero Rocher Golden Spheres on Top -->
+    <!-- Center Ferrero -->
+    <g transform="translate(232, 125)">
+      <circle cx="18" cy="18" r="18" fill="#B8860B"/>
+      <!-- Gold wrapper crinkle pattern -->
+      <path d="M5 28 L10 20 L2 14 L12 10 L18 2 L24 10 L34 14 L26 20 L31 28 Z" fill="#D4AF37"/>
+      <circle cx="18" cy="18" r="12" fill="#8B5A2B"/>
+      <circle cx="14" cy="14" r="2" fill="#E8C87A"/>
+      <circle cx="22" cy="16" r="2" fill="#E8C87A"/>
+    </g>
+
+    <!-- Side Ferrero Left -->
+    <g transform="translate(185, 140) scale(0.8)">
+      <circle cx="18" cy="18" r="18" fill="#B8860B"/>
+      <path d="M5 28 L10 20 L2 14 L12 10 L18 2 L24 10 L34 14 L26 20 L31 28 Z" fill="#D4AF37"/>
+      <circle cx="18" cy="18" r="12" fill="#8B5A2B"/>
+    </g>
+
+    <!-- Side Ferrero Right -->
+    <g transform="translate(285, 140) scale(0.8)">
+      <circle cx="18" cy="18" r="18" fill="#B8860B"/>
+      <path d="M5 28 L10 20 L2 14 L12 10 L18 2 L24 10 L34 14 L26 20 L31 28 Z" fill="#D4AF37"/>
+      <circle cx="18" cy="18" r="12" fill="#8B5A2B"/>
+    </g>
+
+    <!-- Edible Gold Sparkles -->
+    <polygon points="210,120 213,125 218,127 213,129 210,134 207,129 202,127 207,125" fill="#FFD700"/>
+    <polygon points="305,120 307,124 311,126 307,128 305,132 303,128 299,126 303,124" fill="#FFD700"/>
+  </g>
+</svg>

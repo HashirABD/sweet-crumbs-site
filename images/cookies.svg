@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgCK" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCF8F2"/>
+      <stop offset="100%" stop-color="#EFE2D2"/>
+    </linearGradient>
+    <linearGradient id="cookieDough" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5BB82"/>
+      <stop offset="50%" stop-color="#D49E5B"/>
+      <stop offset="100%" stop-color="#B87D38"/>
+    </linearGradient>
+    <filter id="ckShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#462410" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="500" height="375" fill="url(#bgCK)"/>
+
+  <!-- Bakery Parchment Sheet -->
+  <polygon points="50,70 450,55 435,320 65,305" fill="#FAF6ED" filter="url(#ckShadow)"/>
+
+  <!-- Cookie 1 (Back Left) -->
+  <g filter="url(#ckShadow)" transform="translate(100, 75) scale(0.85)">
+    <circle cx="100" cy="100" r="75" fill="url(#cookieDough)"/>
+    <!-- Choc chunks -->
+    <path d="M70,80 Q90,75 85,95 Q70,95 70,80 Z" fill="#2E1206"/>
+    <path d="M110,65 Q130,60 125,80 Q105,80 110,65 Z" fill="#2E1206"/>
+    <path d="M95,120 Q120,115 115,135 Q90,135 95,120 Z" fill="#2E1206"/>
+    <!-- Salt flakes -->
+    <rect x="80" y="85" width="4" height="4" fill="#FFF" transform="rotate(30 80 85)"/>
+  </g>
+
+  <!-- Cookie 2 (Back Right) -->
+  <g filter="url(#ckShadow)" transform="translate(240, 65) scale(0.9)">
+    <circle cx="100" cy="100" r="75" fill="url(#cookieDough)"/>
+    <!-- Choc chunks -->
+    <path d="M75,90 Q95,85 90,105 Q75,105 75,90 Z" fill="#2E1206"/>
+    <path d="M120,85 Q140,80 135,100 Q115,100 120,85 Z" fill="#2E1206"/>
+    <path d="M90,130 Q110,125 105,145 Q85,145 90,130 Z" fill="#2E1206"/>
+    <!-- Salt flakes -->
+    <rect x="125" y="90" width="4" height="4" fill="#FFF" transform="rotate(15 125 90)"/>
+  </g>
+
+  <!-- Cookie 3 (Front Center - Giant, Golden & Gooey) -->
+  <g filter="url(#ckShadow)" transform="translate(145, 115)">
+    <!-- Irregular artisanal cookie edge -->
+    <path d="M105,5 C160,5 205,50 205,105 C205,160 160,205 105,205 C50,205 5,160 5,105 C5,50 50,5 105,5 Z" fill="url(#cookieDough)"/>
+    
+    <!-- Golden brown baked edges & cracks -->
+    <path d="M45,70 Q70,90 60,120" stroke="#9E6425" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M125,55 Q145,75 160,65" stroke="#9E6425" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M130,140 Q155,165 135,175" stroke="#9E6425" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Melted Dark Belgian Chocolate Pools -->
+    <path d="M65,85 C80,75 105,80 100,105 C95,120 70,125 60,110 C55,100 55,90 65,85 Z" fill="#240D04"/>
+    <path d="M125,75 C145,65 165,75 160,95 C155,110 135,110 125,100 C115,90 115,80 125,75 Z" fill="#240D04"/>
+    <path d="M85,135 C105,125 130,130 125,150 C120,165 95,170 80,155 C70,145 75,140 85,135 Z" fill="#240D04"/>
+    <circle cx="155" cy="135" r="14" fill="#240D04"/>
+
+    <!-- Shiny chocolate gloss reflections -->
+    <ellipse cx="80" cy="95" rx="7" ry="4" transform="rotate(-20 80 95)" fill="#542612"/>
+    <ellipse cx="140" cy="85" rx="7" ry="4" transform="rotate(-20 140 85)" fill="#542612"/>
+    <ellipse cx="105" cy="142" rx="8" ry="5" transform="rotate(-20 105 142)" fill="#542612"/>
+
+    <!-- Maldon Sea Salt Flakes (Crisp geometric white crystals) -->
+    <polygon points="85,92 90,88 94,94 89,98" fill="#FFFFFF" opacity="0.95"/>
+    <polygon points="142,82 147,78 151,84 146,88" fill="#FFFFFF" opacity="0.95"/>
+    <polygon points="110,140 115,136 119,142 114,146" fill="#FFFFFF" opacity="0.95"/>
+    <polygon points="152,130 156,126 160,132 156,136" fill="#FFFFFF" opacity="0.95"/>
+    <polygon points="65,135 69,132 72,137 68,140" fill="#FFFFFF" opacity="0.95"/>
+  </g>
+</svg>

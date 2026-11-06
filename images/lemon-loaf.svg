@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgLM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF2"/>
+      <stop offset="100%" stop-color="#F2ECD8"/>
+    </linearGradient>
+    <linearGradient id="loafCrust" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C58535"/>
+      <stop offset="50%" stop-color="#E2A64E"/>
+      <stop offset="100%" stop-color="#B27426"/>
+    </linearGradient>
+    <linearGradient id="glazeWhite" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F5F2EA"/>
+    </linearGradient>
+    <filter id="lmShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#463612" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="500" height="375" fill="url(#bgLM)"/>
+
+  <!-- Cutting Board / Slate Platter -->
+  <rect x="70" y="240" width="360" height="50" rx="14" fill="#DBCABA" filter="url(#lmShadow)"/>
+  <rect x="75" y="235" width="350" height="45" rx="12" fill="#F4EDE4"/>
+
+  <!-- Lemon Loaf Cake -->
+  <g filter="url(#lmShadow)">
+    <!-- Loaf Body Isometric View -->
+    <!-- Front Face -->
+    <path d="M110 200 L110 245 L320 245 L320 200 Z" fill="#B37326"/>
+    <!-- Right Face (Cut or edge) -->
+    <path d="M320 200 L320 245 L390 195 L390 150 Z" fill="#E6BA65"/>
+    <!-- Top Curved Crust -->
+    <path d="M110 200 Q215 150 320 200 L390 150 Q285 100 180 150 Z" fill="url(#loafCrust)"/>
+
+    <!-- Loaf Center Ridge Crinkle / Bloom -->
+    <path d="M140 180 Q240 135 345 175" stroke="#874E0F" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- Thick Opaque White Citrus Sugar Glaze Drip -->
+    <path d="M170 148 Q270 105 375 148 
+             Q370 170 365 178 Q360 155 345 155
+             Q330 155 325 188 Q320 156 300 156
+             Q280 156 275 198 Q270 158 245 158
+             Q225 158 220 185 Q215 158 195 158
+             Q180 158 175 170 Z" fill="url(#glazeWhite)"/>
+
+    <!-- Yellow Candied Lemon Zest Ribbons on Glaze -->
+    <path d="M210 155 Q225 150 240 158" stroke="#F5B800" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M260 148 Q275 142 290 150" stroke="#F5B800" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M310 145 Q325 140 335 148" stroke="#F5B800" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="230" cy="162" r="1.5" fill="#F5B800"/>
+    <circle cx="280" cy="155" r="1.5" fill="#F5B800"/>
+    <circle cx="320" cy="152" r="1.5" fill="#F5B800"/>
+  </g>
+
+  <!-- Fresh Lemon Wheel Slice Beside Loaf -->
+  <g filter="url(#lmShadow)" transform="translate(100, 210) rotate(-15)">
+    <circle cx="35" cy="35" r="32" fill="#F4BA08"/>
+    <circle cx="35" cy="35" r="28" fill="#FFFDF5"/>
+    <circle cx="35" cy="35" r="25" fill="#FAD02C"/>
+    <!-- Segments -->
+    <circle cx="35" cy="35" r="3" fill="#FFF"/>
+    <line x1="35" y1="10" x2="35" y2="60" stroke="#FFF" stroke-width="2"/>
+    <line x1="10" y1="35" x2="60" y2="35" stroke="#FFF" stroke-width="2"/>
+    <line x1="17" y1="17" x2="53" y2="53" stroke="#FFF" stroke-width="2"/>
+    <line x1="17" y1="53" x2="53" y2="17" stroke="#FFF" stroke-width="2"/>
+  </g>
+
+  <!-- Sprig of fresh mint leaf -->
+  <path d="M150 240 Q160 215 180 225 Q165 245 150 240 Z" fill="#4B8C3E"/>
+</svg>

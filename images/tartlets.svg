@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 375" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgTR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF5"/>
+      <stop offset="100%" stop-color="#EFE6DA"/>
+    </linearGradient>
+    <linearGradient id="crustGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5AF6E"/>
+      <stop offset="50%" stop-color="#D1944E"/>
+      <stop offset="100%" stop-color="#AF6E28"/>
+    </linearGradient>
+    <linearGradient id="caramelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DE7A22"/>
+      <stop offset="50%" stop-color="#BA5610"/>
+      <stop offset="100%" stop-color="#8C3A05"/>
+    </linearGradient>
+    <filter id="trShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#46220E" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="500" height="375" fill="url(#bgTR)"/>
+
+  <!-- Platter -->
+  <ellipse cx="250" cy="290" rx="180" ry="36" fill="#D8C9BB" filter="url(#trShadow)"/>
+  <ellipse cx="250" cy="285" rx="170" ry="32" fill="#FAF6EE"/>
+
+  <!-- Tartlet 1 (Back Left) -->
+  <g filter="url(#trShadow)" transform="translate(110, 110) scale(0.8)">
+    <ellipse cx="100" cy="120" rx="85" ry="35" fill="url(#crustGrad)"/>
+    <ellipse cx="100" cy="116" rx="75" ry="28" fill="url(#caramelGrad)"/>
+    <ellipse cx="100" cy="114" rx="20" ry="10" fill="#693716"/>
+  </g>
+
+  <!-- Tartlet 2 (Back Right) -->
+  <g filter="url(#trShadow)" transform="translate(250, 110) scale(0.8)">
+    <ellipse cx="100" cy="120" rx="85" ry="35" fill="url(#crustGrad)"/>
+    <ellipse cx="100" cy="116" rx="75" ry="28" fill="url(#caramelGrad)"/>
+    <ellipse cx="100" cy="114" rx="20" ry="10" fill="#693716"/>
+  </g>
+
+  <!-- Tartlet 3 (Center Front - Hero) -->
+  <g filter="url(#trShadow)" transform="translate(145, 120)">
+    <!-- Fluted Pastry Shell Rim -->
+    <!-- Base Outer Shell -->
+    <path d="M10 100 L30 160 Q105 190 180 160 L200 100 Z" fill="#995818"/>
+    <ellipse cx="105" cy="100" rx="100" ry="42" fill="url(#crustGrad)"/>
+    
+    <!-- Fluted edge scalloping -->
+    <path d="M10 100 Q18 92 26 100 Q34 92 42 100 Q50 92 58 100 Q66 92 74 100 Q82 92 90 100 Q98 92 106 100 Q114 92 122 100 Q130 92 138 100 Q146 92 154 100 Q162 92 170 100 Q178 92 186 100 Q194 92 200 100" stroke="#87470E" stroke-width="2" fill="none"/>
+
+    <!-- Rich Amber Salted Caramel Filling (Glossy Pond) -->
+    <ellipse cx="105" cy="102" rx="88" ry="34" fill="url(#caramelGrad)"/>
+    
+    <!-- Glossy reflection on caramel -->
+    <ellipse cx="80" cy="95" rx="35" ry="12" fill="#E88C3A" opacity="0.6"/>
+
+    <!-- Roasted Pecan Halves Arranged in Star Pattern -->
+    <!-- Center Pecan -->
+    <g transform="translate(105, 100) rotate(15)">
+      <ellipse cx="0" cy="0" rx="22" ry="11" fill="#5E2C11"/>
+      <line x1="-18" y1="0" x2="18" y2="0" stroke="#3D1A07" stroke-width="2"/>
+      <ellipse cx="-5" cy="-3" rx="10" ry="4" fill="#753B18"/>
+      <ellipse cx="5" cy="3" rx="10" ry="4" fill="#753B18"/>
+    </g>
+
+    <!-- Top Left Pecan -->
+    <g transform="translate(75, 90) rotate(-45)">
+      <ellipse cx="0" cy="0" rx="19" ry="10" fill="#5E2C11"/>
+      <line x1="-15" y1="0" x2="15" y2="0" stroke="#3D1A07" stroke-width="1.8"/>
+    </g>
+
+    <!-- Top Right Pecan -->
+    <g transform="translate(138, 92) rotate(45)">
+      <ellipse cx="0" cy="0" rx="19" ry="10" fill="#5E2C11"/>
+      <line x1="-15" y1="0" x2="15" y2="0" stroke="#3D1A07" stroke-width="1.8"/>
+    </g>
+
+    <!-- Bottom Pecan -->
+    <g transform="translate(102, 118) rotate(90)">
+      <ellipse cx="0" cy="0" rx="18" ry="9" fill="#5E2C11"/>
+      <line x1="-14" y1="0" x2="14" y2="0" stroke="#3D1A07" stroke-width="1.8"/>
+    </g>
+
+    <!-- Dark Chocolate Drizzle zig-zag -->
+    <path d="M50 102 Q85 118 105 95 Q135 115 160 98" stroke="#2B1105" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- Flaky Sea Salt Crystals -->
+    <rect x="70" y="105" width="3.5" height="3.5" fill="#FFFFFF" transform="rotate(20 70 105)" opacity="0.95"/>
+    <rect x="130" y="108" width="4" height="4" fill="#FFFFFF" transform="rotate(45 130 108)" opacity="0.95"/>
+    <rect x="100" y="85" width="3" height="3" fill="#FFFFFF" opacity="0.95"/>
+  </g>
+</svg>
